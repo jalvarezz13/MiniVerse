@@ -1,35 +1,36 @@
-import pygame
-import sys
+import tkinter as tk
+from tkinter import *
+from PIL import Image, ImageTk
+from tkinter import ttk
 
-pygame.init()
-res = (1000, 1000)
-screen = pygame.display.set_mode(res)
+class Aplicacion:
+    
+    def __init__(self):
+        #Inicializamos ventana
+        self.ventana1=tk.Tk()
+        self.canvas1= Canvas(self.ventana1, width= 1000, height= 600)
 
-color = (255, 255, 255)
-color_light = (170, 170, 170)
-color_dark = (100, 100, 100)
+        #Añadimos el fondo
+        self.canvas1.pack(expand=True, fill= BOTH)
+        background= ImageTk.PhotoImage(file="src/images/background.png")
+        self.canvas1.create_image(0, 0, image=background, anchor="nw")
 
-width = screen.get_width()
-height = screen.get_height()
+        #Creamos la entidad que se desplaza por el lobby
+        ovni_image = ImageTk.PhotoImage(file="src/images/ovni.png")
+        self.ovni=self.canvas1.create_image(0, 0, image=ovni_image, anchor="nw")
+        self.ventana1.bind("<KeyPress>", self.presion_tecla)
+        
+        self.ventana1.mainloop()       
 
-smallfont = pygame.font.SysFont('ComicSansMS', 35)
-text = smallfont.render('quit', True, color)
+    def presion_tecla(self, evento):
+        if evento.keysym=='Right':
+            self.canvas1.move(self.ovni, 10, 0) #Aquí se ajusta la velocidad
+        if evento.keysym=='Left':
+            self.canvas1.move(self.ovni, -10, 0)
+        if evento.keysym=='Down':
+            self.canvas1.move(self.ovni, 0, 10)
+        if evento.keysym=='Up':
+            self.canvas1.move(self.ovni, 0, -10)
 
-while True:
-    for ev in pygame.event.get():
-        if ev.type == pygame.QUIT:
-            pygame.quit()
-        if ev.type == pygame.MOUSEBUTTONDOWN:
-            if width/2 <= mouse[0] <= width/2+140 and height/2 <= mouse[1] <= height/2+40:
-                pygame.quit()
 
-    screen.fill((60, 25, 60))
-    mouse = pygame.mouse.get_pos()
-
-    if width/2 <= mouse[0] <= width/2+140 and height/2 <= mouse[1] <= height/2+40:
-        pygame.draw.rect(screen, color_light, [width/2, height/2, 140, 40])
-    else:
-        pygame.draw.rect(screen, color_dark, [width/2, height/2, 140, 40])
-
-    screen.blit(text, (width/2+50, height/2))
-    pygame.display.update()
+aplicacion1=Aplicacion()
