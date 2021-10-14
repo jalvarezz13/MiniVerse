@@ -7,71 +7,59 @@ class Aplicacion:
     def __init__(self):
         #Inicializamos ventana
         self.ventana=tk.Tk()
-        self.canvas= Canvas(self.ventana, width= 1000, height= 600)
+        self.canvas= Canvas(self.ventana, width = 1000, height = 600)
+        self.ventana.bind('<Motion>', self.motion)
 
         #Añadimos el fondo
         self.canvas.pack(expand=True, fill= BOTH)
-        background= ImageTk.PhotoImage(file="src/images/background.png")
+        background= ImageTk.PhotoImage(file="src/images/background.jpg")
         self.canvas.create_image(0, 0, image=background, anchor="nw")
         
         #Creacion de planetas
-        tierra_image = ImageTk.PhotoImage(file="src/images/tierra.gif")
-        self.tierra = Label(self.canvas, image=tierra_image)
-        self.tierra.place(x=25, y=125, bordermode="outside")
+        bloque1_image = ImageTk.PhotoImage(file="src/images/amarillo.jpg")
+        self.bloque1 = Button(self.canvas, image=bloque1_image)
+        self.bloque1.place(x=25, y=25)
 
+        bloque2_image = ImageTk.PhotoImage(file="src/images/amarillo.jpg")
+        self.bloque2 = Button(self.canvas, image=bloque1_image)
+        self.bloque2.place(x=425, y=25)
 
-        #self.tierra = self.canvas.create_image(25, 125, image=tierra_image, anchor="w")
-        #tierra = Button(self.canvas, image = tierra_image, background=)
+        bloque3_image = ImageTk.PhotoImage(file="src/images/amarillo.jpg")
+        self.bloque3 = Button(self.canvas, image=bloque1_image)
+        self.bloque3.place(x=800, y=25)
 
-        
-        
-
-
-        #self.ventana.wm_attributes('-transparentcolor', self.ventana['bg'])
-
-
-        venus_image = ImageTk.PhotoImage(file="src/images/venus.png")
-        self.venus=self.canvas.create_image(25, 450, image=venus_image, anchor="w")
-
-        marte_image = ImageTk.PhotoImage(file="src/images/marte.png")
-        self.marte=self.canvas.create_image(400, 125, image=marte_image, anchor="w")
-
-        urano_image = ImageTk.PhotoImage(file="src/images/urano.png")
-        self.urano=self.canvas.create_image(750, 125, image=urano_image, anchor="w")
-
-        agujero_image = ImageTk.PhotoImage(file="src/images/agujeroNegro.png")
-        self.agujero=self.canvas.create_image(750, 475, image=agujero_image, anchor="w")
+        bloque4_image = ImageTk.PhotoImage(file="src/images/amarillo.jpg")
+        self.bloque4 = Button(self.canvas, image=bloque1_image)
+        self.bloque4.place(x=25, y=375)
 
 
         #Creamos la entidad que se desplaza por el lobby
-        ovni_image = ImageTk.PhotoImage(file="src/images/ovni.png")
-        self.ovni=self.canvas.create_image(500, 300, image=ovni_image, anchor="w")
+        mario_image = ImageTk.PhotoImage(file="src/images/mario.png")
+        self.mario=self.canvas.create_image(500, 300, image=mario_image)
+        
         self.ventana.bind("<KeyPress>", self.presion_tecla)
-
 
         self.ventana.resizable(False, False)
         self.ventana.mainloop()
 
-    def on_enter(self, event):
-        print("Hola")
-
-    def check_position(self):
-        print()
-
 
     def presion_tecla(self, evento):
+        
         if evento.keysym=='Right':
-            self.canvas.move(self.ovni, 10, 0) #Aquí se ajusta la velocidad
+            self.canvas.move(self.mario, 10, 0) #Aquí se ajusta la velocidad
         if evento.keysym=='Left':
-            self.canvas.move(self.ovni, -10, 0)
+            self.canvas.move(self.mario, -10, 0)
         if evento.keysym=='Down':
-            self.canvas.move(self.ovni, 0, 10)
+            self.canvas.move(self.mario, 0, 10)
         if evento.keysym=='Up':
-            self.canvas.move(self.ovni, 0, -10)
+            self.canvas.move(self.mario, 0, -10)
 
-        #check_position()
+    def motion(self, evento):
+        x, y = evento.x, evento.y
+        print('{}, {}'.format(x, y))
 
-    
+        
+
 
 
 aplicacion=Aplicacion()
