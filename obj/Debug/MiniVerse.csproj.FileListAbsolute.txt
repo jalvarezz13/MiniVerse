@@ -1,0 +1,15 @@
+C:\Users\chipe\source\repos\MiniVerse\bin\Debug\MiniVerse.exe.config
+C:\Users\chipe\source\repos\MiniVerse\bin\Debug\MiniVerse.exe
+C:\Users\chipe\source\repos\MiniVerse\bin\Debug\MiniVerse.pdb
+C:\Users\chipe\source\repos\MiniVerse\obj\Debug\MiniVerse.csproj.AssemblyReference.cache
+C:\Users\chipe\source\repos\MiniVerse\obj\Debug\MainWindow.g.cs
+C:\Users\chipe\source\repos\MiniVerse\obj\Debug\App.g.cs
+C:\Users\chipe\source\repos\MiniVerse\obj\Debug\MiniVerse_MarkupCompile.cache
+C:\Users\chipe\source\repos\MiniVerse\obj\Debug\MiniVerse_MarkupCompile.lref
+C:\Users\chipe\source\repos\MiniVerse\obj\Debug\MainWindow.baml
+C:\Users\chipe\source\repos\MiniVerse\obj\Debug\MiniVerse.g.resources
+C:\Users\chipe\source\repos\MiniVerse\obj\Debug\MiniVerse.Properties.Resources.resources
+C:\Users\chipe\source\repos\MiniVerse\obj\Debug\MiniVerse.csproj.GenerateResource.cache
+C:\Users\chipe\source\repos\MiniVerse\obj\Debug\MiniVerse.csproj.CoreCompileInputs.cache
+C:\Users\chipe\source\repos\MiniVerse\obj\Debug\MiniVerse.exe
+C:\Users\chipe\source\repos\MiniVerse\obj\Debug\MiniVerse.pdb
