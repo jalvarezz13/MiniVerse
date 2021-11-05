@@ -103,8 +103,17 @@
     <Resource Include="images\btn1.jpg" />
     <Resource Include="images\btn2.jpg" />
     <Resource Include="images\logo1.jpg" />
-    <Resource Include="images\logo1_v2.png" />
+    <Resource Include="images\logo_universo.png" />
     <Resource Include="images\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\venus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\agujeroNegro.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
