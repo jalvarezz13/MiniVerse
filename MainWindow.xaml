@@ -36,9 +36,9 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image x:Name="imgJuego1" Margin="150,50,675,335" Grid.Row="2" Grid.ColumnSpan="2" Source="images/venus.png" Grid.RowSpan="2"/>
-        <Image x:Name="imgPersonaje" Grid.Column="0" Margin="565,225,560,225" Grid.Row="3" Grid.ColumnSpan="4"  Source="images/ovni.png" Height="150" Width="150"/>
+        <Image x:Name="imgJuego1" Margin="150,50,930,335" Grid.Row="2" Grid.ColumnSpan="4" Source="images/venus.png" Grid.RowSpan="2"/>
         <Image Grid.Column="0" Margin="925,350,150,30" Grid.Row="3" Source="images/agujeroNegro.png" Grid.ColumnSpan="4"/>
+        <Image x:Name="imgPersonaje" Grid.Column="0" Margin="565,225,553,225" Grid.Row="3" Grid.ColumnSpan="4"  Source="images/ovni.png" Height="150" Width="150"/>
 
 
 

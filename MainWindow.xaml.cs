@@ -55,14 +55,14 @@ namespace MiniVerse
                         imgPersonaje.Margin = new Thickness(left, up + velocidad, right, down - velocidad);
                     break;
             }
-            Console.WriteLine("Estoy fuera");
+            //Console.WriteLine("Estoy fuera");
             visitarPlanetas(left + 75, up + 75, right + 75, down + 75);
 
         }
 
         private void visitarPlanetas(int left, int up, int right, int down)
         {
-            if (left > 150 && right - 75 > 675 && up > 50 && down > 335)
+            if (left > 150 && right > 930 && up > 50 && down > 335)
             {
                 Console.WriteLine("estoy en venus");
             }
