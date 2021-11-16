@@ -51,27 +51,90 @@ namespace MiniVerse
                     break;
 
                 case Key.Down:
-                    if (down - velocidad > 0)
+                    if (down + velocidad * 1.5 > 0)
                         imgPersonaje.Margin = new Thickness(left, up + velocidad, right, down - velocidad);
                     break;
             }
-            //Console.WriteLine("Estoy fuera");
             visitarPlanetas(left + 75, up + 75, right + 75, down + 75);
 
         }
 
         private void visitarPlanetas(int left, int up, int right, int down)
         {
-            if (left > 150 && right > 930 && up > 50 && down > 335)
+            if (left > 120 && right > 960 && up > 40 && down > 340)
             {
-                Console.WriteLine("estoy en venus");
+                tempLabel.Text = "VENUS";
+                MessageBoxResult resultado = MessageBox.Show("¿Quieres jugar en Venus?", "Bienvenido a Venus", MessageBoxButton.YesNo);
+                switch (resultado)
+                {
+                    case MessageBoxResult.Yes:
+                        tempLabel.Text = "JUGANDO EN VENUS";
+                        break;
+                    case MessageBoxResult.No:
+                        imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
+                        break;
+                }
             }
-
-            else if (left > 925 && right > 150 && up > 350 && down > 30)
+            else if (left > 545 && right > 545 && up > 20 && down > 370)
             {
-                Console.WriteLine("Salir");
-                //App.Current.Shutdown();
+                tempLabel.Text = "TIERRA";
+                MessageBoxResult resultado = MessageBox.Show("¿Quieres jugar en la Tierra?", "Bienvenido a La Tierra", MessageBoxButton.YesNo);
+                switch (resultado)
+                {
+                    case MessageBoxResult.Yes:
+                        tempLabel.Text = "JUGANDO EN LA TIERRA";
+                        break;
+                    case MessageBoxResult.No:
+                        imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
+                        break;
+                }
+            }
+            else if (left > 1000 && right > 80 && up > 40 && down > 350)
+            {
+                tempLabel.Text = "URANO";
+                MessageBoxResult resultado = MessageBox.Show("¿Quieres jugar en Urano  ?", "Bienvenido a Urano", MessageBoxButton.YesNo);
+                switch (resultado)
+                {
+                    case MessageBoxResult.Yes:
+                        tempLabel.Text = "JUGANDO EN URANO";
+                        break;
+                    case MessageBoxResult.No:
+                        imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
+                        break;
+                }
+            }
+            else if (left > 70 && right > 1020 && up > 345 && down > 40)
+            {
+                tempLabel.Text = "MARTE";
+                MessageBoxResult resultado = MessageBox.Show("¿Quieres jugar en Marte?", "Bienvenido a Marte", MessageBoxButton.YesNo);
+                switch (resultado)
+                {
+                    case MessageBoxResult.Yes:
+                        tempLabel.Text = "JUGANDO EN MARTE";
+                        break;
+                    case MessageBoxResult.No:
+                        imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
+                        break;
+                }
+            }
+            else if (left > 1050 && right > 10 && up > 350 && down > 10)
+            {
+                tempLabel.Text = "EXIT";
+                MessageBoxResult resultado = MessageBox.Show("¿Ya te quieres ir?", "Salida", MessageBoxButton.YesNo);
+                switch (resultado)
+                {
+                    case MessageBoxResult.Yes:
+                        App.Current.Shutdown();
+                        break;
+                    case MessageBoxResult.No:
+                        imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
+                        break;
+                }
+            }
+            else {
+                tempLabel.Text = "ESPACIO";
             }
         }
+
     }
 }

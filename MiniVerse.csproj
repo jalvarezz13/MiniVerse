@@ -90,6 +90,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="src\venus.py" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -115,5 +116,11 @@
   <ItemGroup>
     <Resource Include="images\icono.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\marte.png" />
+    <Resource Include="images\tierra.png" />
+    <Resource Include="images\urano.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
