@@ -39,7 +39,7 @@
         <Image x:Name="imgJuego1" Margin="120,40,960,340" Grid.Row="3" Grid.ColumnSpan="4" Source="images/venus.png"/>
         <Image x:Name="imgJuego2" Margin="70,345,1020,40" Grid.Row="3" Grid.ColumnSpan="4" Source="images/marte.png"/>
         <Image x:Name="imgJuego3" Margin="545,20,545,370" Grid.Row="3" Grid.ColumnSpan="4" Source="images/tierra.png"/>
-        <Image x:Name="imgJuego4" Margin="1000,40,80,350" Grid.Row="3" Grid.ColumnSpan="4" Source="images/urano.png"/>
+        <Image x:Name="imgJuego4" Margin="1000,40,80,350" Grid.Row="3" Grid.ColumnSpan="4" Source="images/urano.png" Visibility="Hidden"/>
         <Image x:Name="imgSalir" Grid.Column="0" Margin="1050,350,10,10" Grid.Row="3" Source="images/agujeroNegro.png" Grid.ColumnSpan="4"/>
         <Image x:Name="imgPersonaje" Grid.Column="0" Margin="565,300,553,105" Grid.Row="3" Grid.ColumnSpan="4"  Source="images/ovni.png" Height="150" Width="150"/>
         <TextBox x:Name="tempLabel" Text="" HorizontalAlignment="Center" Margin="37.8,495.6,10.2,9.8" Grid.Row="3" VerticalAlignment="Center" Height="65" Width="716" FontSize="48" Foreground="White" FontWeight="Bold" FontFamily="Showcard Gothic" Grid.Column="1" Background="{x:Null}" TextAlignment="Center" BorderBrush="{x:Null}" SelectionBrush="{x:Null}"/>

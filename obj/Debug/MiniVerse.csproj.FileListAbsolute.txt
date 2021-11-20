@@ -44,3 +44,5 @@ C:\Users\chipe\Source\Repos\Minijuegos_JJC\obj\Debug\MiniVerse.csproj.GenerateRe
 C:\Users\chipe\Source\Repos\Minijuegos_JJC\obj\Debug\MiniVerse.csproj.CoreCompileInputs.cache
 C:\Users\chipe\Source\Repos\Minijuegos_JJC\obj\Debug\MiniVerse.exe
 C:\Users\chipe\Source\Repos\Minijuegos_JJC\obj\Debug\MiniVerse.pdb
+C:\Users\javie\Source\Repos\jalvarezz13\Minijuegos_JJC\obj\Debug\entradaJuego.g.cs
+C:\Users\javie\Source\Repos\jalvarezz13\Minijuegos_JJC\obj\Debug\entradaJuego.baml

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,12 +69,29 @@ namespace MiniVerse
                 switch (resultado)
                 {
                     case MessageBoxResult.Yes:
+                        Process cmd = new Process();
+                        cmd.StartInfo.FileName = "cmd.exe";
+                        cmd.StartInfo.RedirectStandardInput = true;
+                        cmd.StartInfo.RedirectStandardOutput = true;
+                        cmd.StartInfo.CreateNoWindow = true;
+                        cmd.StartInfo.UseShellExecute = false;
+                        cmd.Start();
+
+                        cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && python3 game1.py");
+                        cmd.StandardInput.Flush();
+                        cmd.StandardInput.Close();
+                        cmd.WaitForExit();
+
+                        imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
+
                         tempLabel.Text = "JUGANDO EN VENUS";
+                        checkUrano();
                         break;
                     case MessageBoxResult.No:
                         imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
                         break;
                 }
+
             }
             else if (left > 545 && right > 545 && up > 20 && down > 370)
             {
@@ -82,20 +100,50 @@ namespace MiniVerse
                 switch (resultado)
                 {
                     case MessageBoxResult.Yes:
+                        Process cmd = new Process();
+                        cmd.StartInfo.FileName = "cmd.exe";
+                        cmd.StartInfo.RedirectStandardInput = true;
+                        cmd.StartInfo.RedirectStandardOutput = true;
+                        cmd.StartInfo.CreateNoWindow = true;
+                        cmd.StartInfo.UseShellExecute = false;
+                        cmd.Start();
+
+                        cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && python3 game2.py");
+                        cmd.StandardInput.Flush();
+                        cmd.StandardInput.Close();
+                        cmd.WaitForExit();
+
+                        imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
                         tempLabel.Text = "JUGANDO EN LA TIERRA";
+                        checkUrano();
                         break;
                     case MessageBoxResult.No:
                         imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
                         break;
                 }
+    
             }
-            else if (left > 1000 && right > 80 && up > 40 && down > 350)
+            else if (left > 1000 && right > 80 && up > 40 && down > 350 && imgJuego4.Visibility == Visibility.Visible)
             {
                 tempLabel.Text = "URANO";
                 MessageBoxResult resultado = MessageBox.Show("¿Quieres jugar en Urano  ?", "Bienvenido a Urano", MessageBoxButton.YesNo);
                 switch (resultado)
                 {
                     case MessageBoxResult.Yes:
+                        Process cmd = new Process();
+                        cmd.StartInfo.FileName = "cmd.exe";
+                        cmd.StartInfo.RedirectStandardInput = true;
+                        cmd.StartInfo.RedirectStandardOutput = true;
+                        cmd.StartInfo.CreateNoWindow = true;
+                        cmd.StartInfo.UseShellExecute = false;
+                        cmd.Start();
+
+                        cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && cd game4 && python3 game4.py");
+                        cmd.StandardInput.Flush();
+                        cmd.StandardInput.Close();
+                        cmd.WaitForExit();
+
+                        imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
                         tempLabel.Text = "JUGANDO EN URANO";
                         break;
                     case MessageBoxResult.No:
@@ -110,12 +158,28 @@ namespace MiniVerse
                 switch (resultado)
                 {
                     case MessageBoxResult.Yes:
+                        Process cmd = new Process();
+                        cmd.StartInfo.FileName = "cmd.exe";
+                        cmd.StartInfo.RedirectStandardInput = true;
+                        cmd.StartInfo.RedirectStandardOutput = true;
+                        cmd.StartInfo.CreateNoWindow = true;
+                        cmd.StartInfo.UseShellExecute = false;
+                        cmd.Start();
+
+                        cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && cd game3 && python3 game3.py");
+                        cmd.StandardInput.Flush();
+                        cmd.StandardInput.Close();
+                        cmd.WaitForExit();
+
+                        imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
                         tempLabel.Text = "JUGANDO EN MARTE";
-                        break;
+                        checkUrano();
+                        break;;
                     case MessageBoxResult.No:
                         imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
                         break;
                 }
+
             }
             else if (left > 1050 && right > 10 && up > 350 && down > 10)
             {
@@ -136,5 +200,13 @@ namespace MiniVerse
             }
         }
 
+        private void checkUrano()
+        {
+            if(imgJuego4.Visibility == Visibility.Hidden)
+            {
+                MessageBoxResult resultado = MessageBox.Show("¡¡ ENHORABUENA !!\nHas desbloqueado un planeta oculto.", "MiniVerse", MessageBoxButton.OK);
+                imgJuego4.Visibility = Visibility.Visible;
+            }
+        }
     }
 }
