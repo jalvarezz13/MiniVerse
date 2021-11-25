@@ -23,6 +23,7 @@ namespace MiniVerse
         public entradaJuego()
         {
             InitializeComponent();
+            
         }
     }
 }

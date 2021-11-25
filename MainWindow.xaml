@@ -20,13 +20,13 @@
             <RowDefinition Height="500*"/>
         </Grid.RowDefinitions>
 
-        <Image HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Grid.RowSpan="4" Grid.ColumnSpan="4" Source="images/FondoSinExit.png" Stretch="Fill"/>
-        <Image HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="4" Source="images/banner.jpg" Stretch="UniformToFill"/>
-        <Button x:Name="btnUniverso" Content="Button" Grid.Row="0" Grid.Column="2" Margin="5" Width="Auto" VerticalAlignment="Stretch"/>
-        <Button Content="Button" Grid.Row="0" Grid.Column="3" Margin="5" Width="Auto" VerticalAlignment="Stretch"/>
+        <Image x:Name="imgFondo" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Grid.RowSpan="4" Grid.ColumnSpan="4" Source="images/Universo/FondoUniverso.png"  Stretch="Fill"/>
+        <Image x:Name="imgBanner" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="4" Source="images/Universo/bannerUniverso.jpg" Stretch="UniformToFill"/>
+        <Button x:Name="btnUniverso" Content="Button" Grid.Row="0" Grid.Column="2" Margin="5" Width="Auto" VerticalAlignment="Stretch" Click="tematicaUniverso"/>
+        <Button x:Name="btnDragonBall" Content="Button" Grid.Row="0" Grid.Column="3" Margin="5" Width="Auto" VerticalAlignment="Stretch" Click="tematicaDragonBall"/>
         <Button Content="Button" Grid.Row="1" Grid.Column="2" Margin="5" Width="Auto" VerticalAlignment="Stretch"/>
         <Button Content="Button" Grid.Row="1" Grid.Column="3" Margin="5" Width="Auto" VerticalAlignment="Stretch"/>
-        <Image Margin="0" Grid.RowSpan="2" Source="/images/logo_universo.png" Stretch="Fill"/>
+        <Image x:Name="imgLogo" Margin="0" Grid.RowSpan="2" Source="/images/Universo/LogoUniverso.png" Stretch="Fill"/>
         <Rectangle Margin="0,0.333,-0.333,0" Grid.Row="2" Grid.RowSpan="1" Stroke="Black" Grid.ColumnSpan="4">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -36,14 +36,27 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image x:Name="imgJuego1" Margin="120,40,960,340" Grid.Row="3" Grid.ColumnSpan="4" Source="images/venus.png"/>
-        <Image x:Name="imgJuego2" Margin="70,345,1020,40" Grid.Row="3" Grid.ColumnSpan="4" Source="images/marte.png"/>
-        <Image x:Name="imgJuego3" Margin="545,20,545,370" Grid.Row="3" Grid.ColumnSpan="4" Source="images/tierra.png"/>
-        <Image x:Name="imgJuego4" Margin="1000,40,80,350" Grid.Row="3" Grid.ColumnSpan="4" Source="images/urano.png" Visibility="Hidden"/>
+        <Image x:Name="imgJuego1" Margin="120,40,960,340" Grid.Row="3" Grid.ColumnSpan="4" Source="images/Universo/venus.png"/>
+        <Image x:Name="imgJuego2" Margin="70,345,1020,40" Grid.Row="3" Grid.ColumnSpan="4" Source="images/Universo/marte.png"/>
+        <Image x:Name="imgJuego3" Margin="545,20,545,370" Grid.Row="3" Grid.ColumnSpan="4" Source="images/Universo/tierra.png"/>
+        <Image x:Name="imgJuego4" Margin="1000,40,80,350" Grid.Row="3" Grid.ColumnSpan="4" Source="images/Universo/urano.png" Visibility="Hidden"/>
         <Image x:Name="imgSalir" Grid.Column="0" Margin="1050,350,10,10" Grid.Row="3" Source="images/agujeroNegro.png" Grid.ColumnSpan="4"/>
         <Image x:Name="imgPersonaje" Grid.Column="0" Margin="565,300,553,105" Grid.Row="3" Grid.ColumnSpan="4"  Source="images/ovni.png" Height="150" Width="150"/>
-        <TextBox x:Name="tempLabel" Text="" HorizontalAlignment="Center" Margin="37.8,495.6,10.2,9.8" Grid.Row="3" VerticalAlignment="Center" Height="65" Width="716" FontSize="48" Foreground="White" FontWeight="Bold" FontFamily="Showcard Gothic" Grid.Column="1" Background="{x:Null}" TextAlignment="Center" BorderBrush="{x:Null}" SelectionBrush="{x:Null}"/>
+      
+        
+        <Image x:Name="imgGoku1" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="641,135,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100" Source="images/DragonBall/Goku1.png" Visibility="Hidden"/>
+        <Image x:Name="imgGoku2" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="88,88,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100" Source="images/DragonBall/Goku2.png" Visibility="Hidden"/>
+        <Image x:Name="imgGoku3" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="88,88,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100" Source="images/DragonBall/Goku4.png" Visibility="Hidden"/>
+        <Image x:Name="imgGoku4" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="88,88,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100" Source="images/DragonBall/Goku3.png" Visibility="Hidden"/>
+        <Image x:Name="imgFondoDB" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="88,88,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100" Source="images/DragonBall/FondoDB.png" Visibility="Hidden"/>
+        <Image x:Name="imgBannerDB" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="88,88,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100" Source="images/DragonBall/bannerDB.jpg" Visibility="Hidden"/>
 
+        <Image x:Name="imgUrano" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="88,88,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100" Visibility="Hidden" Source="images/Universo/urano.png"/>
+        <Image x:Name="imgTierra" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="88,88,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100" Visibility="Hidden" Source="images/Universo/tierra.png"/>
+        <Image x:Name="imgMarte" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="88,88,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100" Visibility="Hidden" Source="images/Universo/marte.png"/>
+        <Image x:Name="imgVenus" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="88,88,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100" Visibility="Hidden" Source="images/Universo/venus.png"/>
+        <Image x:Name="imgFondoUniverso" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="88,88,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100" Visibility="Hidden" Source="images/Universo/FondoUniverso.png"/>
+        <Image x:Name="imgBannerUniverso" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="88,88,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100" Visibility="Hidden" Source="images/Universo/bannerUniverso.jpg"/>
 
 
     </Grid>

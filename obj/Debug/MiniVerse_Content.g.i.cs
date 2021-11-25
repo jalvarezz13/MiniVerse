@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icono.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/dragonball/fondodb.png")]
 
 

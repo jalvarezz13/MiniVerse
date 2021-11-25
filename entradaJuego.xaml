@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/images/banner.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="/images/Universo/bannerUniverso.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <Button x:Name="btnYes" Content="Button" HorizontalAlignment="Left" Margin="34,71,0,0" VerticalAlignment="Top" Width="99"/>
         <Button x:Name="btnNo" Content="Button" HorizontalAlignment="Left" Margin="177,71,0,0" VerticalAlignment="Top" Height="20" Width="99"/>
