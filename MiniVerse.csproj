@@ -103,52 +103,47 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\Universo\FondoUniverso.png" />
-    <Resource Include="images\ovni.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\Universo\bannerUniverso.jpg" />
-    <Resource Include="images\btn1.jpg" />
-    <Resource Include="images\btn3.jpg" />
-    <Resource Include="images\Universo\logo1.jpg" />
-    <Resource Include="images\Universo\LogoUniverso.png" />
-    <Resource Include="images\LogoMario.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\Universo\venus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\agujeroNegro.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="images\icono.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\Universo\marte.png" />
-    <Resource Include="images\Universo\tierra.png" />
-    <Resource Include="images\Universo\urano.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="games\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\DragonBall\Goku3.png" />
-    <Resource Include="images\DragonBall\Goku4.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="mundo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\DragonBall\Goku1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\DragonBall\Goku2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\DragonBall\bannerDB.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\DragonBall\FondoDB.png" />
+    <Resource Include="images\botonUniverso.jpg" />
+    <Resource Include="images\btonMarioBros.jpg" />
+    <Resource Include="images\DragonBall\bannerDragonBall.jpg" />
+    <Resource Include="images\DragonBall\fondoDragonBall.png" />
+    <Resource Include="images\DragonBall\juego1DragonBall.png" />
+    <Resource Include="images\DragonBall\juego2DragonBall.png" />
+    <Resource Include="images\DragonBall\juego3DragonBall.png" />
+    <Resource Include="images\DragonBall\juego4DragonBall.png" />
+    <Resource Include="images\DragonBall\logoDragonBall.png" />
+    <Resource Include="images\DragonBall\naveDragonBall.png" />
+    <Resource Include="images\MarioBros\bannerMarioBros.jpg" />
+    <Resource Include="images\MarioBros\fondoMarioBros.png" />
+    <Resource Include="images\MarioBros\LogoMario.png" />
+    <Resource Include="images\MarioBros\naveMarioBros.png" />
+    <Resource Include="images\Otros\FondoDB.png" />
+    <Resource Include="images\Otros\personajeDB.png" />
+    <Resource Include="images\Otros\personajeDB2.png" />
+    <Resource Include="images\Otros\personajeDB3.png" />
+    <Resource Include="images\Otros\SalidaDB.png" />
+    <Resource Include="images\PacMan\bannerPacMan.jpg" />
+    <Resource Include="images\PacMan\fondoPacMan.png" />
+    <Resource Include="images\PacMan\logoPacMan.png" />
+    <Resource Include="images\PacMan\navePacMan.png" />
+    <Resource Include="images\Universo\bannerUniverso.jpg" />
+    <Resource Include="images\Universo\fondoUniverso.png" />
+    <Resource Include="images\Universo\logoUniverso.png" />
+    <Resource Include="images\Universo\marte.png" />
+    <Resource Include="images\Universo\naveUniverso.png" />
+    <Resource Include="images\Universo\salidaUniverso.png" />
+    <Resource Include="images\Universo\tierra.png" />
+    <Resource Include="images\Universo\urano.png" />
+    <Resource Include="images\Universo\venus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -278,11 +278,13 @@ namespace MiniVerse
         private void tematicaDragonBall(object sender, RoutedEventArgs e)
         {
             this.imgFondo.Source = imgFondoDB.Source;
+            this.imgPersonaje.Source = imgPersonajeDB.Source;
             this.imgJuego1.Source = imgGoku1.Source;
             this.imgJuego2.Source = imgGoku2.Source;
             this.imgJuego3.Source = imgGoku3.Source;
             this.imgJuego4.Source = imgGoku4.Source;
             this.imgBanner.Source = imgBannerDB.Source;
+            this.imgSalir.Source = imgSalidaDB.Source;
             this.imgJuego4.Visibility = Visibility.Hidden;
 
         }
@@ -290,11 +292,13 @@ namespace MiniVerse
         private void tematicaUniverso(object sender, RoutedEventArgs e)
         {
             this.imgFondo.Source = imgFondoUniverso.Source;
+            this.imgPersonaje.Source = imgPersonajeUniverso.Source;
             this.imgJuego1.Source = imgVenus.Source;
             this.imgJuego2.Source = imgMarte.Source;
             this.imgJuego3.Source = imgTierra.Source;
             this.imgJuego4.Source = imgUrano.Source;
             this.imgBanner.Source = imgBannerUniverso.Source;
+            this.imgSalir.Source = imgSalidaUniverso.Source;
             this.imgJuego4.Visibility = Visibility.Hidden;
 
         }
