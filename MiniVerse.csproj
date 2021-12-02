@@ -93,11 +93,16 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="games\game1.py" />
+    <None Include="games\game2.py" />
+    <None Include="games\game3\game3.py" />
+    <None Include="games\game4\game4DB\Goku.py" />
+    <None Include="games\game4\game4PM\PacMan.py" />
+    <None Include="games\game4\game4Universo\SpaceInvaders.py" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="src\venus.py" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -106,7 +111,7 @@
     <Resource Include="images\icono.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="games\" />
+    <Folder Include="games\game4\game4MB\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="mundo.png" />
@@ -144,6 +149,39 @@
     <Resource Include="images\Universo\tierra.png" />
     <Resource Include="images\Universo\urano.png" />
     <Resource Include="images\Universo\venus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="games\game3\Fin_juego.jpg" />
+    <Resource Include="games\game3\titulo.jpg" />
+    <Resource Include="games\game4\game4DB\Imagenes\barravidagoku.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\barravidaminicell.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\cuadrovidagoku.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\cuadrovidaminicell.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\disparominicell.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\fondo.jpg" />
+    <Resource Include="games\game4\game4DB\Imagenes\goku.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\gokudown.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\gokukamehameha.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\gokuleft.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\gokuright.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\gokuup.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\Hasganado.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\Hasperdido.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\kamehameha.gif" />
+    <Resource Include="games\game4\game4DB\Imagenes\minicell.gif" />
+    <Resource Include="games\game4\game4DB\Imagenes\minicell.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\namek.jpg" />
+    <Resource Include="games\game4\game4DB\Imagenes\Plantilla.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\vidagoku.png" />
+    <Resource Include="games\game4\game4Universo\background-black.png" />
+    <Resource Include="games\game4\game4Universo\pixel_laser_blue.png" />
+    <Resource Include="games\game4\game4Universo\pixel_laser_green.png" />
+    <Resource Include="games\game4\game4Universo\pixel_laser_red.png" />
+    <Resource Include="games\game4\game4Universo\pixel_laser_yellow.png" />
+    <Resource Include="games\game4\game4Universo\pixel_ship_blue_small.png" />
+    <Resource Include="games\game4\game4Universo\pixel_ship_green_small.png" />
+    <Resource Include="games\game4\game4Universo\pixel_ship_red_small.png" />
+    <Resource Include="games\game4\game4Universo\pixel_ship_yellow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

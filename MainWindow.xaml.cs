@@ -21,6 +21,8 @@ namespace MiniVerse
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int tematica = 1; //TEMATICA: 1=UNIVERSO, 2=DRAGONBALL, 3=PACMAN, 4=MARIOBROS
+
         public MainWindow()
         {
             InitializeComponent();
@@ -62,19 +64,29 @@ namespace MiniVerse
 
         private void visitarPlanetas(int left, int up, int right, int down)
         {
+            
+            //PLANETA VENUS
             if (left > 120 && right > 960 && up > 40 && down > 340)
             {
-               // tempLabel.Text = "VENUS";
                 MessageBoxResult resultado;
-                if (imgFondo.Source == imgFondoDB.Source)
-                {
-                    resultado = MessageBox.Show("¿Quieres ayudar a Goku?", "Saludos de Goku", MessageBoxButton.YesNo);
-                }
-                else
+                if (tematica == 1)
                 {
                     resultado = MessageBox.Show("¿Quieres jugar en Venus?", "Bienvenido a Venus", MessageBoxButton.YesNo);
                 }
-               
+                else if (tematica ==2)
+                {
+                    resultado = MessageBox.Show("¿Quieres ayudar a Goku?", "Saludos de Goku", MessageBoxButton.YesNo);
+                    
+                }
+                else if (tematica == 3)
+                {
+                    resultado = MessageBox.Show("POR PROGRAMAR", "POR PROGRAMAR", MessageBoxButton.YesNo);
+                }
+                else
+                {
+                    resultado = MessageBox.Show("POR PROGRAMAR", "POR PROGRAMAR", MessageBoxButton.YesNo);
+                }
+
                 switch (resultado)
                 {
                     case MessageBoxResult.Yes:
@@ -93,7 +105,6 @@ namespace MiniVerse
 
                         imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
 
-                      //  tempLabel.Text = "JUGANDO EN VENUS";
                         check();
                         break;
                     case MessageBoxResult.No:
@@ -102,19 +113,29 @@ namespace MiniVerse
                 }
 
             }
+
+            // PLANETA TIERRA
             else if (left > 545 && right > 545 && up > 20 && down > 370)
             {
-               // tempLabel.Text = "TIERRA";
-
                 MessageBoxResult resultado;
-                if (imgFondo.Source == imgFondoDB.Source)
-                {
-                    resultado = MessageBox.Show("¿Quieres ayudar a BuBu?", "Saludos de BuBu", MessageBoxButton.YesNo);
-                }
-                else
+                if (tematica == 1)
                 {
                     resultado = MessageBox.Show("¿Quieres jugar en La Tierra?", "Bienvenido a La Tierra", MessageBoxButton.YesNo);
                 }
+                else if (tematica == 2)
+                {
+                    resultado = MessageBox.Show("¿Quieres ayudar a BuBu?", "Saludos de BuBu", MessageBoxButton.YesNo);
+                }
+                else if (tematica == 3)
+                {
+                    resultado = MessageBox.Show("POR PROGRAMAR", "POR PROGRAMAR", MessageBoxButton.YesNo);
+                }
+                else
+                {
+                    resultado = MessageBox.Show("POR PROGRAMAR", "POR PROGRAMAR", MessageBoxButton.YesNo);
+                }
+
+
                 switch (resultado)
                 {
                     case MessageBoxResult.Yes:
@@ -131,86 +152,130 @@ namespace MiniVerse
                         cmd.StandardInput.Close();
                         cmd.WaitForExit();
 
-                        imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
-                    //    tempLabel.Text = "JUGANDO EN LA TIERRA";
+                        imgPersonaje.Margin = new Thickness(568, 308, 555, 112);                    
                         check();
+
                         break;
+
                     case MessageBoxResult.No:
                         imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
                         break;
                 }
     
             }
+
+            //PLANETA *ESPECIAL* URANO
             else if (left > 1000 && right > 80 && up > 40 && down > 350 && imgJuego4.Visibility == Visibility.Visible)
             {
-              //  tempLabel.Text = "URANO";
                 MessageBoxResult resultado;
-                if (imgFondo.Source == imgFondoDB.Source)
-                {
-                    resultado = MessageBox.Show("¿Quieres ayudar a Goku Super Sayan?", "Saludos de Goku Super Sayan", MessageBoxButton.YesNo);
-                }
-                else
+                if (tematica == 1)
                 {
                     resultado = MessageBox.Show("¿Quieres jugar en Urano?", "Bienvenido a Urano", MessageBoxButton.YesNo);
                 }
+                else if (tematica == 2)
+                {
+                    resultado = MessageBox.Show("¿Quieres ayudar a Goku Super Sayan?", "Saludos de Goku Super Sayan", MessageBoxButton.YesNo);
+                }
+                else if (tematica == 3)
+                {
+                    resultado = MessageBox.Show("POR PROGRAMAR", "POR PROGRAMAR", MessageBoxButton.YesNo);
+                }
+                else {
+                    resultado = MessageBox.Show("POR PROGRAMAR", "POR PROGRAMAR", MessageBoxButton.YesNo);
+                }
+
                 switch (resultado)
                 {
                     case MessageBoxResult.Yes:
-                        if(imgFondo.Source == imgFondoDB.Source)
+                        //Se crea el proceso
+                        Process cmd = new Process();
+                        cmd = new Process();
+                        cmd.StartInfo.FileName = "cmd.exe";
+                        cmd.StartInfo.RedirectStandardInput = true;
+                        cmd.StartInfo.RedirectStandardOutput = true;
+                        cmd.StartInfo.CreateNoWindow = true;
+                        cmd.StartInfo.UseShellExecute = false;
+                        cmd.Start();
+
+                        switch (tematica)
                         {
-                            Process cmd = new Process();
-                            cmd.StartInfo.FileName = "cmd.exe";
-                            cmd.StartInfo.RedirectStandardInput = true;
-                            cmd.StartInfo.RedirectStandardOutput = true;
-                            cmd.StartInfo.CreateNoWindow = true;
-                            cmd.StartInfo.UseShellExecute = false;
-                            cmd.Start();
+                            //JUEGO ESPECIAL UNIVERSO
+                            case 1:                               
+                                cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && cd game4 && cd game4Universo && python3 SpaceInvaders.py");
+                                cmd.StandardInput.Flush();
+                                cmd.StandardInput.Close();
+                                cmd.WaitForExit();
 
-                            cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && cd game4DB && python3 Goku.py");
-                            cmd.StandardInput.Flush();
-                            cmd.StandardInput.Close();
-                            cmd.WaitForExit();
+                                imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
 
-                            imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
-                        }
-                        else
-                        {
-                            Process cmd = new Process();
-                            cmd.StartInfo.FileName = "cmd.exe";
-                            cmd.StartInfo.RedirectStandardInput = true;
-                            cmd.StartInfo.RedirectStandardOutput = true;
-                            cmd.StartInfo.CreateNoWindow = true;
-                            cmd.StartInfo.UseShellExecute = false;
-                            cmd.Start();
+                                break;
 
-                            cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && cd game4Universo && python3 game4.py");
-                            cmd.StandardInput.Flush();
-                            cmd.StandardInput.Close();
-                            cmd.WaitForExit();
+                            //JUEGO ESPECIAL DRAGON BALL
+                            case 2:
+                                cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && cd game4 && cd game4DB && python3 Goku.py");
+                                cmd.StandardInput.Flush();
+                                cmd.StandardInput.Close();
+                                cmd.WaitForExit();
 
-                            imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
-                   //         tempLabel.Text = "JUGANDO EN URANO";
-                        }
+                                imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
+                                
+                                break;
 
+                            //JUEGO ESPECIAL PACMAN
+                            case 3:
+                                cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && cd game4 && cd game4PM && python3 PacMan.py");
+                                cmd.StandardInput.Flush();
+                                cmd.StandardInput.Close();
+                                cmd.WaitForExit();
+
+                                imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
+                                
+                                break;
+
+                            //JUEGO ESPECIAL MARIO BROS
+                            case 4:
+                                /*
+                                cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && cd game4 && cd game4MB && python3 MarioBros.py");
+                                cmd.StandardInput.Flush();
+                                cmd.StandardInput.Close();
+                                cmd.WaitForExit();
+
+                                imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
+                                */
+
+                                break;
+                        }             
                         
                         break;
+
                     case MessageBoxResult.No:
                         imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
                         break;
                 }
             }
+
+            //PLANETA MARTE
             else if (left > 70 && right > 1020 && up > 345 && down > 40)
             {
-              //  tempLabel.Text = "MARTE";
                 MessageBoxResult resultado;
-                if (imgFondo.Source == imgFondoDB.Source)
-                {
-                    resultado = MessageBox.Show("¿Quieres ayudar a Krilin?", "Saludos de Krilin", MessageBoxButton.YesNo);
-                }
-                else
+                if (tematica == 1)
                 {
                     resultado = MessageBox.Show("¿Quieres jugar en Marte?", "Bienvenido a Marte", MessageBoxButton.YesNo);
                 }
+                else if (tematica == 2)
+                {
+                    resultado = MessageBox.Show("¿Quieres ayudar a Krilin?", "Saludos de Krilin", MessageBoxButton.YesNo);
+                }
+                else if (tematica == 3)
+                {
+                    resultado = MessageBox.Show("POR PROGRAMAR", "POR PROGRAMAR", MessageBoxButton.YesNo);
+                }
+                else
+                {
+                    resultado = MessageBox.Show("POR PROGRAMAR", "POR PROGRAMAR", MessageBoxButton.YesNo);
+                }
+
+
                 switch (resultado)
                 {
                     case MessageBoxResult.Yes:
@@ -228,18 +293,20 @@ namespace MiniVerse
                         cmd.WaitForExit();
 
                         imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
-                   //     tempLabel.Text = "JUGANDO EN MARTE";
                         check();
-                        break;;
+
+                        break;
+
                     case MessageBoxResult.No:
                         imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
                         break;
                 }
 
             }
+
+            //SALIDA
             else if (left > 1050 && right > 10 && up > 350 && down > 10)
             {
-          //      tempLabel.Text = "EXIT";
                 MessageBoxResult resultado = MessageBox.Show("¿Ya te quieres ir?", "Salida", MessageBoxButton.YesNo);
                 switch (resultado)
                 {
@@ -251,56 +318,114 @@ namespace MiniVerse
                         break;
                 }
             }
-            else {
-             //   tempLabel.Text = "ESPACIO";
-            }
+
+            //LOBBY
+            else { }
         }
 
+        //CHECKEAR JUEGO ESPECIAL
         private void check()
-        {
+        {            
             if(imgJuego4.Visibility == Visibility.Hidden)
             {
-                if (this.imgFondo.Source == imgFondoDB.Source)
+                MessageBoxResult resultado;
+                switch (tematica)
                 {
-                    MessageBoxResult resultado = MessageBox.Show("¡¡ ENHORABUENA !!\nHas desbloqueado un personaje oculto.", "MiniVerse", MessageBoxButton.OK);
-                    imgJuego4.Visibility = Visibility.Visible;
-                }
-                else 
-                {
-                    MessageBoxResult resultado = MessageBox.Show("¡¡ ENHORABUENA !!\nHas desbloqueado un planeta oculto.", "MiniVerse", MessageBoxButton.OK);
-                    imgJuego4.Visibility = Visibility.Visible;
-                }
-               
-               
+                    //JUEGO ESPECIAL UNIVERSO
+                    case 1:
+                        resultado = MessageBox.Show("¡¡ ENHORABUENA !!\nHas desbloqueado un planeta oculto.", "MiniVerse", MessageBoxButton.OK);
+                        break;
+
+                    //JUEGO ESPECIAL DRAGON BALL
+                    case 2:
+                        resultado = MessageBox.Show("¡¡ ENHORABUENA !!\nHas desbloqueado un personaje oculto.", "MiniVerse", MessageBoxButton.OK);
+                        break;
+
+                    //JUEGO ESPECIAL PACMAN
+                    case 3:
+                        resultado = MessageBox.Show("¡¡ ENHORABUENA !!\nHas desbloqueado un juego oculto.", "MiniVerse", MessageBoxButton.OK);
+                        break;
+
+                    //JUEGO ESPECIAL MARIO BROS
+                    case 4:
+                        //resultado = MessageBox.Show("¡¡ ENHORABUENA !!\nHas desbloqueado un ******* oculto.", "MiniVerse", MessageBoxButton.OK);
+                        resultado = MessageBox.Show("PROGRAMAR", "MiniVerse", MessageBoxButton.OK);
+                        break;
+                } 
+                    imgJuego4.Visibility = Visibility.Visible;                                             
             }
         }
 
-        private void tematicaDragonBall(object sender, RoutedEventArgs e)
-        {
-            this.imgFondo.Source = imgFondoDB.Source;
-            this.imgPersonaje.Source = imgPersonajeDB.Source;
-            this.imgJuego1.Source = imgGoku1.Source;
-            this.imgJuego2.Source = imgGoku2.Source;
-            this.imgJuego3.Source = imgGoku3.Source;
-            this.imgJuego4.Source = imgGoku4.Source;
-            this.imgBanner.Source = imgBannerDB.Source;
-            this.imgSalir.Source = imgSalidaDB.Source;
-            this.imgJuego4.Visibility = Visibility.Hidden;
 
-        }
+        /*-------------------------------------- RECURSOS DE TEMATICAS  -----------------------------------------*/
 
         private void tematicaUniverso(object sender, RoutedEventArgs e)
         {
-            this.imgFondo.Source = imgFondoUniverso.Source;
-            this.imgPersonaje.Source = imgPersonajeUniverso.Source;
-            this.imgJuego1.Source = imgVenus.Source;
-            this.imgJuego2.Source = imgMarte.Source;
-            this.imgJuego3.Source = imgTierra.Source;
-            this.imgJuego4.Source = imgUrano.Source;
-            this.imgBanner.Source = imgBannerUniverso.Source;
-            this.imgSalir.Source = imgSalidaUniverso.Source;
+            tematica = 1;
+            string rutaImagen = "images/Universo/";
+            this.imgLogo.Source = new BitmapImage(new Uri(rutaImagen + "logoUniverso.png", UriKind.Relative));
+            this.imgFondo.Source = new BitmapImage(new Uri(rutaImagen + "fondoUniverso.png", UriKind.Relative));
+            this.imgPersonaje.Source = new BitmapImage(new Uri(rutaImagen + "naveUniverso.png", UriKind.Relative));
+            this.imgJuego1.Source = new BitmapImage(new Uri(rutaImagen + "venus.png", UriKind.Relative));
+            this.imgJuego2.Source = new BitmapImage(new Uri(rutaImagen + "marte.png", UriKind.Relative));
+            this.imgJuego3.Source = new BitmapImage(new Uri(rutaImagen + "tierra.png", UriKind.Relative));
+            this.imgJuego4.Source = new BitmapImage(new Uri(rutaImagen + "urano.png", UriKind.Relative));
+            this.imgBanner.Source = new BitmapImage(new Uri(rutaImagen + "bannerUniverso.jpg", UriKind.Relative));
+            this.imgSalir.Source = new BitmapImage(new Uri(rutaImagen + "salidaUniverso.png", UriKind.Relative));
             this.imgJuego4.Visibility = Visibility.Hidden;
-
         }
+        
+        private void tematicaDragonBall(object sender, RoutedEventArgs e)
+        {
+            tematica = 2;
+            string rutaImagen = "images/DragonBall/";
+            this.imgLogo.Source = new BitmapImage(new Uri(rutaImagen + "logoDragonBall.png", UriKind.Relative));
+            this.imgFondo.Source = new BitmapImage(new Uri(rutaImagen + "fondoDragonBall.png", UriKind.Relative));
+            this.imgPersonaje.Source = new BitmapImage(new Uri(rutaImagen + "naveDragonBall.png", UriKind.Relative));
+            this.imgJuego1.Source = new BitmapImage(new Uri(rutaImagen + "juego1DragonBall.png", UriKind.Relative));
+            this.imgJuego2.Source = new BitmapImage(new Uri(rutaImagen + "juego2DragonBall.png", UriKind.Relative));
+            this.imgJuego3.Source = new BitmapImage(new Uri(rutaImagen + "juego3DragonBall.png", UriKind.Relative));
+            this.imgJuego4.Source = new BitmapImage(new Uri(rutaImagen + "juego4DragonBall.png", UriKind.Relative));
+            this.imgBanner.Source = new BitmapImage(new Uri(rutaImagen + "bannerDragonBall.jpg", UriKind.Relative));
+            this.imgSalir.Source = new BitmapImage(new Uri(rutaImagen + "salidaDragonBall.png", UriKind.Relative));
+            this.imgJuego4.Visibility = Visibility.Hidden;
+        }
+
+        private void tematicaPacMan(object sender, RoutedEventArgs e)
+        {
+            tematica = 3;
+            string rutaImagen = "images/PacMan/";
+            this.imgLogo.Source = new BitmapImage(new Uri(rutaImagen + "logoPacMan.png", UriKind.Relative));
+            this.imgFondo.Source = new BitmapImage(new Uri(rutaImagen + "fondoPacMan.png", UriKind.Relative));
+            this.imgPersonaje.Source = new BitmapImage(new Uri(rutaImagen + "navePacMan.png", UriKind.Relative));
+            this.imgJuego1.Source = new BitmapImage(new Uri(rutaImagen + "juego1PacMan.png", UriKind.Relative));
+            this.imgJuego2.Source = new BitmapImage(new Uri(rutaImagen + "juego2PacMan.png", UriKind.Relative));
+            this.imgJuego3.Source = new BitmapImage(new Uri(rutaImagen + "juego3PacMan.png", UriKind.Relative));
+            this.imgJuego4.Source = new BitmapImage(new Uri(rutaImagen + "juego4PacMan.png", UriKind.Relative));
+            this.imgBanner.Source = new BitmapImage(new Uri(rutaImagen + "bannerPacMan.jpg", UriKind.Relative));
+            this.imgSalir.Source = new BitmapImage(new Uri(rutaImagen + "salidaPacMan.png", UriKind.Relative));
+            this.imgJuego4.Visibility = Visibility.Hidden;
+        }
+
+        private void tematicaMarioBros(object sender, RoutedEventArgs e)
+        {
+            tematica = 4;
+            string rutaImagen = "images/MarioBros/";
+            this.imgLogo.Source = new BitmapImage(new Uri(rutaImagen + "logoMarioBros.png", UriKind.Relative));
+            this.imgFondo.Source = new BitmapImage(new Uri(rutaImagen + "fondoMarioBros.png", UriKind.Relative));
+            this.imgPersonaje.Source = new BitmapImage(new Uri(rutaImagen + "naveMarioBros.png", UriKind.Relative));
+            this.imgJuego1.Source = new BitmapImage(new Uri(rutaImagen + "juego1MarioBros.png", UriKind.Relative));
+            this.imgJuego2.Source = new BitmapImage(new Uri(rutaImagen + "juego2MarioBros.png", UriKind.Relative));
+            this.imgJuego3.Source = new BitmapImage(new Uri(rutaImagen + "juego3MarioBros.png", UriKind.Relative));
+            this.imgJuego4.Source = new BitmapImage(new Uri(rutaImagen + "juego4MarioBros.png", UriKind.Relative));
+            this.imgBanner.Source = new BitmapImage(new Uri(rutaImagen + "bannerMarioBros.jpg", UriKind.Relative));
+            this.imgSalir.Source = new BitmapImage(new Uri(rutaImagen + "salidaMarioBros.png", UriKind.Relative));
+            this.imgJuego4.Visibility = Visibility.Hidden;
+        }
+    
+    
     }
+
+
+
 }
