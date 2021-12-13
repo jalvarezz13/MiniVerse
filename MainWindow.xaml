@@ -22,10 +22,26 @@
 
         <Image x:Name="imgFondo" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Grid.RowSpan="4" Grid.ColumnSpan="4" Source="images/Universo/FondoUniverso.png"  Stretch="Fill"/>
         <Image x:Name="imgBanner" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="4" Source="images/Universo/bannerUniverso.jpg" Stretch="UniformToFill"/>
-        <Button x:Name="btnUniverso" Content="Universo" Grid.Row="0" Grid.Column="2" Margin="5" Width="Auto" VerticalAlignment="Stretch" Click="tematicaUniverso"/>
-        <Button x:Name="btnDragonBall" Content="Dragon Ball" Grid.Row="0" Grid.Column="3" Margin="5" Width="Auto" VerticalAlignment="Stretch" Click="tematicaDragonBall"/>
-        <Button Content="Pac Man" Grid.Row="1" Grid.Column="2" Margin="5" Width="Auto" VerticalAlignment="Stretch" Click="tematicaPacMan"/>
-        <Button Content="Mario Bros" Grid.Row="1" Grid.Column="3" Margin="5" Width="Auto" VerticalAlignment="Stretch" Click="tematicaMarioBros"/>
+        <Button x:Name="btnUniverso" Content="UNIVERSO" Grid.Row="0" Grid.Column="2" Margin="5" Width="Auto" VerticalAlignment="Stretch" Click="tematicaUniverso" Foreground="White" FontSize="16" FontWeight="Bold">
+            <Button.Background>
+                <ImageBrush ImageSource="images/btnUniverso.jpg" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnDragonBall" Content="DRAGON BALL" Grid.Row="0" Grid.Column="3" Margin="5" Width="Auto" VerticalAlignment="Stretch" Click="tematicaDragonBall" Foreground="Black" FontWeight="Bold" FontSize="16" FontStretch="Normal">
+            <Button.Background>
+                <ImageBrush ImageSource="/images/btnDragonBall.png" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+        <Button Content="PAC MAN" Grid.Row="1" Grid.Column="3" Margin="5" Width="Auto" VerticalAlignment="Stretch" Click="tematicaPacMan" FontWeight="Bold" FontSize="16" Foreground="White">
+            <Button.Background>
+                <ImageBrush ImageSource="/images/btnPacMan.png" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Button Content="MARIO BROS" Grid.Row="1" Grid.Column="2" Margin="5" Width="Auto" VerticalAlignment="Stretch" Click="tematicaMarioBros" FontWeight="Bold" FontSize="16" Foreground="Black">
+            <Button.Background>
+                <ImageBrush ImageSource="/images/btnMarioBros.jpg"/>
+            </Button.Background>
+        </Button>
         <Image x:Name="imgLogo" Margin="0" Grid.RowSpan="2" Source="/images/Universo/LogoUniverso.png" Stretch="Fill"/>
         <Rectangle Margin="0,0.333,-0.333,0" Grid.Row="2" Grid.RowSpan="1" Stroke="Black" Grid.ColumnSpan="4">
             <Rectangle.Fill>
@@ -42,7 +58,8 @@
         <Image x:Name="imgJuego4" Margin="1000,40,80,350" Grid.Row="3" Grid.ColumnSpan="4" Source="images/Universo/urano.png" Visibility="Hidden"/>
         <Image x:Name="imgSalir" Grid.Column="0" Margin="1050,350,10,10" Grid.Row="3" Source="images/Universo/salidaUniverso.png" Grid.ColumnSpan="4"/>
         <Image x:Name="imgPersonaje" Grid.Column="0" Margin="565,300,553,105" Grid.Row="3" Grid.ColumnSpan="4"  Source="images/Universo/naveUniverso.png" Height="150" Width="150"/>
-      
-        
+        <ProgressBar x:Name="pbPuntos" Grid.Column="1" Margin="20,20,20,20" Grid.RowSpan="2" Background="#3FFFFFFF" BorderBrush="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="#B206B025"/>
+        <TextBlock x:Name="txtPuntuacion" Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="PUNTUACIÓN" VerticalAlignment="Top" Height="40" Width="580" FontWeight="Bold" FontSize="36" IsEnabled="False" TextAlignment="Center" Margin="100,31,0,0" Grid.RowSpan="2" Foreground="#BF000000"/>
+
     </Grid>
 </Window>

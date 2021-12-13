@@ -64,27 +64,27 @@ namespace MiniVerse
 
         private void visitarPlanetas(int left, int up, int right, int down)
         {
-            
+            int pointsToWin = new Random().Next(3) + 2;
+            int pointsToWinSpecial = new Random().Next(6) + 5;
             //PLANETA VENUS
             if (left > 120 && right > 960 && up > 40 && down > 340)
             {
                 MessageBoxResult resultado;
                 if (tematica == 1)
                 {
-                    resultado = MessageBox.Show("¿Quieres jugar en Venus?", "Bienvenido a Venus", MessageBoxButton.YesNo);
+                    resultado = MessageBox.Show("¿Quieres jugar en Venus y conseguir " + pointsToWin.ToString() + " puntos por descubrir su inédita atmosfera?", "Bienvenido a Venus", MessageBoxButton.YesNo);
                 }
-                else if (tematica ==2)
+                else if (tematica == 2)
                 {
-                    resultado = MessageBox.Show("¿Quieres ayudar a Goku?", "Saludos de Goku", MessageBoxButton.YesNo);
-                    
+                    resultado = MessageBox.Show("Hola, soy Goku ¿Me ayudas con este minijuego?\nSi lo haces, ganarás " + pointsToWin.ToString() + " puntos!", "Mensaje de Goku", MessageBoxButton.YesNo);
                 }
                 else if (tematica == 3)
                 {
-                    resultado = MessageBox.Show("POR PROGRAMAR", "POR PROGRAMAR", MessageBoxButton.YesNo);
+                    resultado = MessageBox.Show("Escapa del fantasma azul y el señor PacMan te regalará " + pointsToWin.ToString() + " PacPoints.", "Fantasma azul", MessageBoxButton.YesNo);
                 }
                 else
                 {
-                    resultado = MessageBox.Show("POR PROGRAMAR", "POR PROGRAMAR", MessageBoxButton.YesNo);
+                    resultado = MessageBox.Show("¿Quieres probar la seta gigante?\nMario te regalará " + pointsToWin.ToString() + " puntos si le ayudas a superar este reto.", "Champinión rojo", MessageBoxButton.YesNo);
                 }
 
                 switch (resultado)
@@ -104,8 +104,9 @@ namespace MiniVerse
                         cmd.WaitForExit();
 
                         imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
-
                         check();
+                        pbPuntos.Value = pbPuntos.Value + pointsToWin;
+                        checkPB();
                         break;
                     case MessageBoxResult.No:
                         imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
@@ -120,19 +121,19 @@ namespace MiniVerse
                 MessageBoxResult resultado;
                 if (tematica == 1)
                 {
-                    resultado = MessageBox.Show("¿Quieres jugar en La Tierra?", "Bienvenido a La Tierra", MessageBoxButton.YesNo);
+                    resultado = MessageBox.Show("¿Quieres jugar en la Tierra y conseguir " + pointsToWin.ToString() + " puntos por descubrir su naturaleza sorprendente?", "Bienvenido a La Tierra", MessageBoxButton.YesNo);
                 }
                 else if (tematica == 2)
                 {
-                    resultado = MessageBox.Show("¿Quieres ayudar a BuBu?", "Saludos de BuBu", MessageBoxButton.YesNo);
+                    resultado = MessageBox.Show("¿Quieres ayudar a BuBu?\nSi lo haces, ganarás " + pointsToWin.ToString() + " puntos!", "Saludos de BuBu", MessageBoxButton.YesNo);
                 }
                 else if (tematica == 3)
                 {
-                    resultado = MessageBox.Show("POR PROGRAMAR", "POR PROGRAMAR", MessageBoxButton.YesNo);
+                    resultado = MessageBox.Show("Escapa del fantasma amarillo y el señor PacMan te regalará " + pointsToWin.ToString() + " PacPoints.", "Fantasma amarillo", MessageBoxButton.YesNo);
                 }
                 else
                 {
-                    resultado = MessageBox.Show("POR PROGRAMAR", "POR PROGRAMAR", MessageBoxButton.YesNo);
+                    resultado = MessageBox.Show("Como te descuides el fantasma te comerá, ¡juega para escapar!", "Fantasma comilón", MessageBoxButton.YesNo);
                 }
 
 
@@ -152,106 +153,17 @@ namespace MiniVerse
                         cmd.StandardInput.Close();
                         cmd.WaitForExit();
 
-                        imgPersonaje.Margin = new Thickness(568, 308, 555, 112);                    
+                        imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
                         check();
-
+                        pbPuntos.Value = pbPuntos.Value + pointsToWin;
+                        checkPB();
                         break;
 
                     case MessageBoxResult.No:
                         imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
                         break;
                 }
-    
-            }
 
-            //PLANETA *ESPECIAL* URANO
-            else if (left > 1000 && right > 80 && up > 40 && down > 350 && imgJuego4.Visibility == Visibility.Visible)
-            {
-                MessageBoxResult resultado;
-                if (tematica == 1)
-                {
-                    resultado = MessageBox.Show("¿Quieres jugar en Urano?", "Bienvenido a Urano", MessageBoxButton.YesNo);
-                }
-                else if (tematica == 2)
-                {
-                    resultado = MessageBox.Show("¿Quieres ayudar a Goku Super Sayan?", "Saludos de Goku Super Sayan", MessageBoxButton.YesNo);
-                }
-                else if (tematica == 3)
-                {
-                    resultado = MessageBox.Show("POR PROGRAMAR", "POR PROGRAMAR", MessageBoxButton.YesNo);
-                }
-                else {
-                    resultado = MessageBox.Show("POR PROGRAMAR", "POR PROGRAMAR", MessageBoxButton.YesNo);
-                }
-
-                switch (resultado)
-                {
-                    case MessageBoxResult.Yes:
-                        //Se crea el proceso
-                        Process cmd = new Process();
-                        cmd = new Process();
-                        cmd.StartInfo.FileName = "cmd.exe";
-                        cmd.StartInfo.RedirectStandardInput = true;
-                        cmd.StartInfo.RedirectStandardOutput = true;
-                        cmd.StartInfo.CreateNoWindow = true;
-                        cmd.StartInfo.UseShellExecute = false;
-                        cmd.Start();
-
-                        switch (tematica)
-                        {
-                            //JUEGO ESPECIAL UNIVERSO
-                            case 1:                               
-                                cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && cd game4 && cd game4Universo && python3 SpaceInvaders.py");
-                                cmd.StandardInput.Flush();
-                                cmd.StandardInput.Close();
-                                cmd.WaitForExit();
-
-                                imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
-
-                                break;
-
-                            //JUEGO ESPECIAL DRAGON BALL
-                            case 2:
-                                cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && cd game4 && cd game4DB && python3 Goku.py");
-                                cmd.StandardInput.Flush();
-                                cmd.StandardInput.Close();
-                                cmd.WaitForExit();
-
-                                imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
-                                
-                                break;
-
-                            //JUEGO ESPECIAL PACMAN
-                            case 3:
-                                cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && cd game4 && cd game4PM && python3 PacMan.py");
-                                cmd.StandardInput.Flush();
-                                cmd.StandardInput.Close();
-                                cmd.WaitForExit();
-
-                                imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
-                                
-                                break;
-
-                            //JUEGO ESPECIAL MARIO BROS
-                            case 4:
-                                /*
-                                cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && cd game4 && cd game4MB && python3 MarioBros.py");
-                                cmd.StandardInput.Flush();
-                                cmd.StandardInput.Close();
-                                cmd.WaitForExit();
-
-                                imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
-                                */
-
-                                break;
-                        }             
-                        
-                        break;
-
-                    case MessageBoxResult.No:
-                        imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
-                        break;
-                }
             }
 
             //PLANETA MARTE
@@ -260,19 +172,19 @@ namespace MiniVerse
                 MessageBoxResult resultado;
                 if (tematica == 1)
                 {
-                    resultado = MessageBox.Show("¿Quieres jugar en Marte?", "Bienvenido a Marte", MessageBoxButton.YesNo);
+                    resultado = MessageBox.Show("¿Quieres jugar en Marte y conseguir " + pointsToWin.ToString() + " puntos por descubrir sus paisajes rojizos?", "Bienvenido a Marte", MessageBoxButton.YesNo);
                 }
                 else if (tematica == 2)
                 {
-                    resultado = MessageBox.Show("¿Quieres ayudar a Krilin?", "Saludos de Krilin", MessageBoxButton.YesNo);
+                    resultado = MessageBox.Show("¿Quieres ayudar a Krilin?\nSi lo haces, ganarás " + pointsToWin.ToString() + " puntos!", "Saludos de Krilin", MessageBoxButton.YesNo);
                 }
                 else if (tematica == 3)
                 {
-                    resultado = MessageBox.Show("POR PROGRAMAR", "POR PROGRAMAR", MessageBoxButton.YesNo);
+                    resultado = MessageBox.Show("¿Quieres ganar puntos con las cerezas? \nMr. PacMan te regalará " + pointsToWin.ToString() + " PacPoints.", "Las cerezas de PacMan", MessageBoxButton.YesNo);
                 }
                 else
                 {
-                    resultado = MessageBox.Show("POR PROGRAMAR", "POR PROGRAMAR", MessageBoxButton.YesNo);
+                    resultado = MessageBox.Show("¿Quieres ganar puntos con las monedas de Mario? \nMario te regalará " + pointsToWin.ToString() + " puntos si le ayudas a superar este reto.", "Mario Coins", MessageBoxButton.YesNo);
                 }
 
 
@@ -294,7 +206,8 @@ namespace MiniVerse
 
                         imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
                         check();
-
+                        pbPuntos.Value = pbPuntos.Value + pointsToWin;
+                        checkPB();
                         break;
 
                     case MessageBoxResult.No:
@@ -302,6 +215,97 @@ namespace MiniVerse
                         break;
                 }
 
+            }
+
+            //PLANETA *ESPECIAL* URANO
+            else if (left > 1000 && right > 80 && up > 40 && down > 350 && imgJuego4.Visibility == Visibility.Visible)
+            {
+                MessageBoxResult resultado;
+                if (tematica == 1)
+                {
+                    resultado = MessageBox.Show("¿Quieres jugar en Urano y conseguir " + pointsToWinSpecial.ToString() + " puntos por descubrir sus anillos gigantes?", "Bienvenido a Urano", MessageBoxButton.YesNo);
+                }
+                else if (tematica == 2)
+                {
+                    resultado = MessageBox.Show("¿Quieres ayudar a Goku Super Sayan?\nSi lo haces, ganarás " + pointsToWinSpecial.ToString() + " puntos!", "Saludos de Goku Super Sayan", MessageBoxButton.YesNo);
+                }
+                else if (tematica == 3)
+                {
+                    resultado = MessageBox.Show("¿Quieres ganar puntos con la fresa? \nMr. PacMan te regalará " + pointsToWinSpecial.ToString() + " PacPoints.", "La fresa de PacMan", MessageBoxButton.YesNo);
+                }
+                else
+                {
+                    resultado = MessageBox.Show("¿Quieres probar el superpoder misterioso\nMario te regalará " + pointsToWinSpecial.ToString() + " puntos si le ayudas a superar este reto.", "Super Power UP", MessageBoxButton.YesNo);
+                }
+
+                switch (resultado)
+                {
+                    case MessageBoxResult.Yes:
+                        //Se crea el proceso
+                        Process cmd = new Process();
+                        cmd = new Process();
+                        cmd.StartInfo.FileName = "cmd.exe";
+                        cmd.StartInfo.RedirectStandardInput = true;
+                        cmd.StartInfo.RedirectStandardOutput = true;
+                        cmd.StartInfo.CreateNoWindow = true;
+                        cmd.StartInfo.UseShellExecute = false;
+                        cmd.Start();
+
+                        switch (tematica)
+                        {
+                            //JUEGO ESPECIAL UNIVERSO
+                            case 1:
+                                cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && cd game4 && cd game4Universo && python3 SpaceInvaders.py");
+                                cmd.StandardInput.Flush();
+                                cmd.StandardInput.Close();
+                                cmd.WaitForExit();
+
+                                imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
+
+                                break;
+
+                            //JUEGO ESPECIAL DRAGON BALL
+                            case 2:
+                                cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && cd game4 && cd game4DB && python3 Goku.py");
+                                cmd.StandardInput.Flush();
+                                cmd.StandardInput.Close();
+                                cmd.WaitForExit();
+
+                                imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
+
+                                break;
+
+                            //JUEGO ESPECIAL PACMAN
+                            case 3:
+                                cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && cd game4 && cd game4PM && python3 PacMan.py");
+                                cmd.StandardInput.Flush();
+                                cmd.StandardInput.Close();
+                                cmd.WaitForExit();
+
+                                imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
+
+                                break;
+
+                            //JUEGO ESPECIAL MARIO BROS
+                            case 4:
+                                cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && cd game4 && cd game4MB && python3 main.py");
+                                cmd.StandardInput.Flush();
+                                cmd.StandardInput.Close();
+                                cmd.WaitForExit();
+
+                                imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
+
+                                break;
+                        }
+
+                        pbPuntos.Value = pbPuntos.Value + pointsToWinSpecial;
+                        checkPB();
+                        break;
+
+                    case MessageBoxResult.No:
+                        imgPersonaje.Margin = new Thickness(568, 308, 555, 112);
+                        break;
+                }
             }
 
             //SALIDA
@@ -325,37 +329,46 @@ namespace MiniVerse
 
         //CHECKEAR JUEGO ESPECIAL
         private void check()
-        {            
-            if(imgJuego4.Visibility == Visibility.Hidden)
+        {
+            if (imgJuego4.Visibility == Visibility.Hidden)
             {
                 MessageBoxResult resultado;
                 switch (tematica)
                 {
                     //JUEGO ESPECIAL UNIVERSO
                     case 1:
-                        resultado = MessageBox.Show("¡¡ ENHORABUENA !!\nHas desbloqueado un planeta oculto.", "MiniVerse", MessageBoxButton.OK);
+                        MessageBox.Show("¡¡ ENHORABUENA !!\nHas desbloqueado un planeta oculto.", "MiniVerse", MessageBoxButton.OK);
                         break;
 
                     //JUEGO ESPECIAL DRAGON BALL
                     case 2:
-                        resultado = MessageBox.Show("¡¡ ENHORABUENA !!\nHas desbloqueado un personaje oculto.", "MiniVerse", MessageBoxButton.OK);
+                        MessageBox.Show("¡¡ ENHORABUENA !!\nHas desbloqueado un personaje oculto.", "MiniVerse", MessageBoxButton.OK);
                         break;
 
                     //JUEGO ESPECIAL PACMAN
                     case 3:
-                        resultado = MessageBox.Show("¡¡ ENHORABUENA !!\nHas desbloqueado un juego oculto.", "MiniVerse", MessageBoxButton.OK);
+                        MessageBox.Show("¡¡ ENHORABUENA !!\nHas desbloqueado un juego oculto.", "MiniVerse", MessageBoxButton.OK);
                         break;
 
                     //JUEGO ESPECIAL MARIO BROS
                     case 4:
-                        //resultado = MessageBox.Show("¡¡ ENHORABUENA !!\nHas desbloqueado un ******* oculto.", "MiniVerse", MessageBoxButton.OK);
-                        resultado = MessageBox.Show("PROGRAMAR", "MiniVerse", MessageBoxButton.OK);
+                        MessageBox.Show("¡¡ ENHORABUENA !!\nHas desbloqueado un objeto oculto.", "MiniVerse", MessageBoxButton.OK);
                         break;
-                } 
-                    imgJuego4.Visibility = Visibility.Visible;                                             
+                }
+                imgJuego4.Visibility = Visibility.Visible;
             }
         }
 
+        private void checkPB()
+        {
+            if (pbPuntos.Value >= 100)
+            {
+                MessageBox.Show("¡¡ ENHORABUENA !!\nHas conseguido la máxima puntuación.", "MiniVerse", MessageBoxButton.OK);
+                pbPuntos.Foreground = Brushes.LightSkyBlue;
+                //pbPuntos.Foreground = Brushes.Cyan;
+                txtPuntuacion.Text = "JUEGO COMPLETADO";
+            }
+        }
 
         /*-------------------------------------- RECURSOS DE TEMATICAS  -----------------------------------------*/
 
@@ -374,7 +387,7 @@ namespace MiniVerse
             this.imgSalir.Source = new BitmapImage(new Uri(rutaImagen + "salidaUniverso.png", UriKind.Relative));
             this.imgJuego4.Visibility = Visibility.Hidden;
         }
-        
+
         private void tematicaDragonBall(object sender, RoutedEventArgs e)
         {
             tematica = 2;
@@ -402,7 +415,7 @@ namespace MiniVerse
             this.imgJuego2.Source = new BitmapImage(new Uri(rutaImagen + "juego2PacMan.png", UriKind.Relative));
             this.imgJuego3.Source = new BitmapImage(new Uri(rutaImagen + "juego3PacMan.png", UriKind.Relative));
             this.imgJuego4.Source = new BitmapImage(new Uri(rutaImagen + "juego4PacMan.png", UriKind.Relative));
-            this.imgBanner.Source = new BitmapImage(new Uri(rutaImagen + "bannerPacMan.jpg", UriKind.Relative));
+            this.imgBanner.Source = new BitmapImage(new Uri(rutaImagen + "bannerPacMan.png", UriKind.Relative));
             this.imgSalir.Source = new BitmapImage(new Uri(rutaImagen + "salidaPacMan.png", UriKind.Relative));
             this.imgJuego4.Visibility = Visibility.Hidden;
         }
@@ -422,8 +435,8 @@ namespace MiniVerse
             this.imgSalir.Source = new BitmapImage(new Uri(rutaImagen + "salidaMarioBros.png", UriKind.Relative));
             this.imgJuego4.Visibility = Visibility.Hidden;
         }
-    
-    
+
+
     }
 
 

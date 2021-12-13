@@ -108,47 +108,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\icono.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="games\game4\game4MB\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="mundo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\botonUniverso.jpg" />
-    <Resource Include="images\btonMarioBros.jpg" />
-    <Resource Include="images\DragonBall\bannerDragonBall.jpg" />
-    <Resource Include="images\DragonBall\fondoDragonBall.png" />
-    <Resource Include="images\DragonBall\juego1DragonBall.png" />
-    <Resource Include="images\DragonBall\juego2DragonBall.png" />
-    <Resource Include="images\DragonBall\juego3DragonBall.png" />
-    <Resource Include="images\DragonBall\juego4DragonBall.png" />
-    <Resource Include="images\DragonBall\logoDragonBall.png" />
-    <Resource Include="images\DragonBall\naveDragonBall.png" />
-    <Resource Include="images\MarioBros\bannerMarioBros.jpg" />
-    <Resource Include="images\MarioBros\fondoMarioBros.png" />
-    <Resource Include="images\MarioBros\LogoMario.png" />
-    <Resource Include="images\MarioBros\naveMarioBros.png" />
-    <Resource Include="images\Otros\FondoDB.png" />
-    <Resource Include="images\Otros\personajeDB.png" />
-    <Resource Include="images\Otros\personajeDB2.png" />
-    <Resource Include="images\Otros\personajeDB3.png" />
-    <Resource Include="images\Otros\SalidaDB.png" />
-    <Resource Include="images\PacMan\bannerPacMan.jpg" />
-    <Resource Include="images\PacMan\fondoPacMan.png" />
-    <Resource Include="images\PacMan\logoPacMan.png" />
-    <Resource Include="images\PacMan\navePacMan.png" />
-    <Resource Include="images\Universo\bannerUniverso.jpg" />
-    <Resource Include="images\Universo\fondoUniverso.png" />
-    <Resource Include="images\Universo\logoUniverso.png" />
-    <Resource Include="images\Universo\marte.png" />
-    <Resource Include="images\Universo\naveUniverso.png" />
-    <Resource Include="images\Universo\salidaUniverso.png" />
-    <Resource Include="images\Universo\tierra.png" />
-    <Resource Include="images\Universo\urano.png" />
-    <Resource Include="images\Universo\venus.png" />
+    <Resource Include="images\DragonBall\salidaDragonBall.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="games\game3\Fin_juego.jpg" />
@@ -182,6 +142,50 @@
     <Resource Include="games\game4\game4Universo\pixel_ship_green_small.png" />
     <Resource Include="games\game4\game4Universo\pixel_ship_red_small.png" />
     <Resource Include="games\game4\game4Universo\pixel_ship_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\btnUniverso.jpg" />
+    <Resource Include="images\btnDragonBall.png" />
+    <Resource Include="images\btnPacMan.png" />
+    <Resource Include="images\btnMarioBros.jpg" />
+    <Resource Include="images\DragonBall\bannerDragonBall.jpg" />
+    <Resource Include="images\DragonBall\fondoDragonBall.png" />
+    <Resource Include="images\DragonBall\juego1DragonBall.png" />
+    <Resource Include="images\DragonBall\juego2DragonBall.png" />
+    <Resource Include="images\DragonBall\juego3DragonBall.png" />
+    <Resource Include="images\DragonBall\juego4DragonBall.png" />
+    <Resource Include="images\DragonBall\logoDragonBall.png" />
+    <Resource Include="images\DragonBall\naveDragonBall.png" />
+    <Resource Include="images\icono.png" />
+    <Resource Include="images\MarioBros\bannerMarioBros.jpg" />
+    <Resource Include="images\MarioBros\fondoMarioBros.png" />
+    <Resource Include="images\MarioBros\juego1MarioBros.png" />
+    <Resource Include="images\MarioBros\juego2MarioBros.png" />
+    <Resource Include="images\MarioBros\juego3MarioBros.png" />
+    <Resource Include="images\MarioBros\juego4MarioBros.png" />
+    <Resource Include="images\MarioBros\logoMarioBros.png" />
+    <Resource Include="images\MarioBros\naveMarioBros.png" />
+    <Resource Include="images\PacMan\fondoPacMan.png" />
+    <Resource Include="images\PacMan\juego1PacMan.png" />
+    <Resource Include="images\PacMan\juego2PacMan.png" />
+    <Resource Include="images\PacMan\juego3PacMan.png" />
+    <Resource Include="images\PacMan\juego4PacMan.png" />
+    <Resource Include="images\PacMan\logoPacMan.png" />
+    <Resource Include="images\PacMan\navePacMan.png" />
+    <Resource Include="images\Universo\bannerUniverso.jpg" />
+    <Resource Include="images\Universo\FondoUniverso.png" />
+    <Resource Include="images\Universo\LogoUniverso.png" />
+    <Resource Include="images\Universo\marte.png" />
+    <Resource Include="images\Universo\naveUniverso.png" />
+    <Resource Include="images\Universo\salidaUniverso.png" />
+    <Resource Include="images\Universo\tierra.png" />
+    <Resource Include="images\Universo\urano.png" />
+    <Resource Include="images\Universo\venus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\PacMan\bannerPacMan.png" />
+    <Resource Include="images\MarioBros\salidaMarioBros.png" />
+    <Resource Include="images\PacMan\salidaPacMan.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
