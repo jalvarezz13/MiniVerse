@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -22,10 +24,13 @@ namespace MiniVerse
     public partial class MainWindow : Window
     {
         private int tematica = 1; //TEMATICA: 1=UNIVERSO, 2=DRAGONBALL, 3=PACMAN, 4=MARIOBROS
+        SoundPlayer musica = new SoundPlayer();
 
         public MainWindow()
         {
             InitializeComponent();
+            musica.SoundLocation = Directory.GetCurrentDirectory() + "\\music\\Universo.wav";
+            musica.Play();
         }
 
         private void moverPersonaje(object sender, KeyEventArgs e)
@@ -385,6 +390,9 @@ namespace MiniVerse
             this.imgBanner.Source = new BitmapImage(new Uri(rutaImagen + "bannerUniverso.jpg", UriKind.Relative));
             this.imgSalir.Source = new BitmapImage(new Uri(rutaImagen + "salidaUniverso.png", UriKind.Relative));
             this.imgJuego4.Visibility = Visibility.Hidden;
+
+            musica.SoundLocation = Directory.GetCurrentDirectory() + "\\music\\Universo.wav";
+            musica.Play();
         }
 
         private void tematicaDragonBall(object sender, RoutedEventArgs e)
@@ -401,6 +409,9 @@ namespace MiniVerse
             this.imgBanner.Source = new BitmapImage(new Uri(rutaImagen + "bannerDragonBall.jpg", UriKind.Relative));
             this.imgSalir.Source = new BitmapImage(new Uri(rutaImagen + "salidaDragonBall.png", UriKind.Relative));
             this.imgJuego4.Visibility = Visibility.Hidden;
+
+            musica.SoundLocation = Directory.GetCurrentDirectory() + "\\music\\DragonBall.wav";
+            musica.Play();
         }
 
         private void tematicaPacMan(object sender, RoutedEventArgs e)
@@ -417,6 +428,9 @@ namespace MiniVerse
             this.imgBanner.Source = new BitmapImage(new Uri(rutaImagen + "bannerPacMan.png", UriKind.Relative));
             this.imgSalir.Source = new BitmapImage(new Uri(rutaImagen + "salidaPacMan.png", UriKind.Relative));
             this.imgJuego4.Visibility = Visibility.Hidden;
+
+            musica.SoundLocation = Directory.GetCurrentDirectory() + "\\music\\PacMan.wav";
+            musica.Play();
         }
 
         private void tematicaMarioBros(object sender, RoutedEventArgs e)
@@ -433,6 +447,9 @@ namespace MiniVerse
             this.imgBanner.Source = new BitmapImage(new Uri(rutaImagen + "bannerMarioBros.jpg", UriKind.Relative));
             this.imgSalir.Source = new BitmapImage(new Uri(rutaImagen + "salidaMarioBros.png", UriKind.Relative));
             this.imgJuego4.Visibility = Visibility.Hidden;
+
+            musica.SoundLocation = Directory.GetCurrentDirectory() + "\\music\\MarioBros.wav";
+            musica.Play();
         }
 
 

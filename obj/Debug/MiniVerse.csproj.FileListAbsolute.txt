@@ -79,3 +79,19 @@ C:\Users\javie\source\repos\jalvarezz13\Minijuegos_JJC\obj\Debug\MiniVerse.cspro
 C:\Users\javie\source\repos\jalvarezz13\Minijuegos_JJC\obj\Debug\MiniVerse.csproj.CoreCompileInputs.cache
 C:\Users\javie\source\repos\jalvarezz13\Minijuegos_JJC\obj\Debug\MiniVerse.exe
 C:\Users\javie\source\repos\jalvarezz13\Minijuegos_JJC\obj\Debug\MiniVerse.csproj.AssemblyReference.cache
+D:\Juan\ESTUDIOS\4º INFORMÁTICA\Primer Cuatrimestre\Multimedia\Laboratorio\Minijuegos_JJC\bin\Debug\MiniVerse.exe.config
+D:\Juan\ESTUDIOS\4º INFORMÁTICA\Primer Cuatrimestre\Multimedia\Laboratorio\Minijuegos_JJC\bin\Debug\MiniVerse.exe
+D:\Juan\ESTUDIOS\4º INFORMÁTICA\Primer Cuatrimestre\Multimedia\Laboratorio\Minijuegos_JJC\bin\Debug\MiniVerse.pdb
+D:\Juan\ESTUDIOS\4º INFORMÁTICA\Primer Cuatrimestre\Multimedia\Laboratorio\Minijuegos_JJC\obj\Debug\MiniVerse.csproj.AssemblyReference.cache
+D:\Juan\ESTUDIOS\4º INFORMÁTICA\Primer Cuatrimestre\Multimedia\Laboratorio\Minijuegos_JJC\obj\Debug\MainWindow.g.cs
+D:\Juan\ESTUDIOS\4º INFORMÁTICA\Primer Cuatrimestre\Multimedia\Laboratorio\Minijuegos_JJC\obj\Debug\App.g.cs
+D:\Juan\ESTUDIOS\4º INFORMÁTICA\Primer Cuatrimestre\Multimedia\Laboratorio\Minijuegos_JJC\obj\Debug\MiniVerse_Content.g.cs
+D:\Juan\ESTUDIOS\4º INFORMÁTICA\Primer Cuatrimestre\Multimedia\Laboratorio\Minijuegos_JJC\obj\Debug\MiniVerse_MarkupCompile.cache
+D:\Juan\ESTUDIOS\4º INFORMÁTICA\Primer Cuatrimestre\Multimedia\Laboratorio\Minijuegos_JJC\obj\Debug\MiniVerse_MarkupCompile.lref
+D:\Juan\ESTUDIOS\4º INFORMÁTICA\Primer Cuatrimestre\Multimedia\Laboratorio\Minijuegos_JJC\obj\Debug\MainWindow.baml
+D:\Juan\ESTUDIOS\4º INFORMÁTICA\Primer Cuatrimestre\Multimedia\Laboratorio\Minijuegos_JJC\obj\Debug\MiniVerse.g.resources
+D:\Juan\ESTUDIOS\4º INFORMÁTICA\Primer Cuatrimestre\Multimedia\Laboratorio\Minijuegos_JJC\obj\Debug\MiniVerse.Properties.Resources.resources
+D:\Juan\ESTUDIOS\4º INFORMÁTICA\Primer Cuatrimestre\Multimedia\Laboratorio\Minijuegos_JJC\obj\Debug\MiniVerse.csproj.GenerateResource.cache
+D:\Juan\ESTUDIOS\4º INFORMÁTICA\Primer Cuatrimestre\Multimedia\Laboratorio\Minijuegos_JJC\obj\Debug\MiniVerse.csproj.CoreCompileInputs.cache
+D:\Juan\ESTUDIOS\4º INFORMÁTICA\Primer Cuatrimestre\Multimedia\Laboratorio\Minijuegos_JJC\obj\Debug\MiniVerse.exe
+D:\Juan\ESTUDIOS\4º INFORMÁTICA\Primer Cuatrimestre\Multimedia\Laboratorio\Minijuegos_JJC\obj\Debug\MiniVerse.pdb

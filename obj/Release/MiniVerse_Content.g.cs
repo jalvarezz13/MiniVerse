@@ -9,6 +9,7 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("games/game1/game1.py")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("music/universo.mp3")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("games/game2/game2.py")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("games/game3/game3.py")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("games/game4/game4db/goku.py")]
