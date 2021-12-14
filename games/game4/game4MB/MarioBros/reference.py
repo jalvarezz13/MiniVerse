@@ -27,7 +27,7 @@ def windowClosing():
     exit()
 
 def setup():   
-    title("Mario Bros - imitation pygame - Jeffrey Agudelo - Jose Giraldo")
+    title("Mario Bros - MiniVerse")
     folderFiles("MarioBros/Archivos")
     resizable(false)
     resize(unidad * 16, unidad * 15)

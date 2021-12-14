@@ -55,10 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="entradaJuego.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -66,9 +62,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="entradaJuego.xaml.cs">
-      <DependentUpon>entradaJuego.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -93,12 +86,20 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="games\game1.py" />
-    <None Include="games\game2.py" />
-    <None Include="games\game3\game3.py" />
-    <None Include="games\game4\game4DB\Goku.py" />
-    <None Include="games\game4\game4PM\PacMan.py" />
-    <None Include="games\game4\game4Universo\SpaceInvaders.py" />
+    <None Include="games\game4\game4MB\MarioBros\Archivos\metricas imagenes.tsv" />
+    <None Include="games\game4\game4MB\MarioBros\__pycache__\actores.cpython-39.pyc" />
+    <None Include="games\game4\game4MB\MarioBros\__pycache__\baseElementos.cpython-39.pyc" />
+    <None Include="games\game4\game4MB\MarioBros\__pycache__\bloques.cpython-39.pyc" />
+    <None Include="games\game4\game4MB\MarioBros\__pycache__\cargar.cpython-39.pyc" />
+    <None Include="games\game4\game4MB\MarioBros\__pycache__\decorativo.cpython-39.pyc" />
+    <None Include="games\game4\game4MB\MarioBros\__pycache__\plataformas.cpython-39.pyc" />
+    <None Include="games\game4\game4MB\MarioBros\__pycache__\reference.cpython-39.pyc" />
+    <None Include="games\game4\game4MB\__pycache__\custom_math.cpython-39.pyc" />
+    <None Include="games\game4\game4MB\__pycache__\file_management.cpython-39.pyc" />
+    <None Include="games\game4\game4MB\__pycache__\graphics.cpython-39.pyc" />
+    <None Include="games\game4\game4MB\__pycache__\graphics_text.cpython-39.pyc" />
+    <None Include="games\game4\game4MB\__pycache__\graphics_transform.cpython-39.pyc" />
+    <None Include="games\game4\game4MB\__pycache__\other_tools.cpython-39.pyc" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -109,39 +110,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\DragonBall\salidaDragonBall.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="games\game3\Fin_juego.jpg" />
-    <Resource Include="games\game3\titulo.jpg" />
-    <Resource Include="games\game4\game4DB\Imagenes\barravidagoku.png" />
-    <Resource Include="games\game4\game4DB\Imagenes\barravidaminicell.png" />
-    <Resource Include="games\game4\game4DB\Imagenes\cuadrovidagoku.png" />
-    <Resource Include="games\game4\game4DB\Imagenes\cuadrovidaminicell.png" />
-    <Resource Include="games\game4\game4DB\Imagenes\disparominicell.png" />
-    <Resource Include="games\game4\game4DB\Imagenes\fondo.jpg" />
-    <Resource Include="games\game4\game4DB\Imagenes\goku.png" />
-    <Resource Include="games\game4\game4DB\Imagenes\gokudown.png" />
-    <Resource Include="games\game4\game4DB\Imagenes\gokukamehameha.png" />
-    <Resource Include="games\game4\game4DB\Imagenes\gokuleft.png" />
-    <Resource Include="games\game4\game4DB\Imagenes\gokuright.png" />
-    <Resource Include="games\game4\game4DB\Imagenes\gokuup.png" />
-    <Resource Include="games\game4\game4DB\Imagenes\Hasganado.png" />
-    <Resource Include="games\game4\game4DB\Imagenes\Hasperdido.png" />
-    <Resource Include="games\game4\game4DB\Imagenes\kamehameha.gif" />
-    <Resource Include="games\game4\game4DB\Imagenes\minicell.gif" />
-    <Resource Include="games\game4\game4DB\Imagenes\minicell.png" />
-    <Resource Include="games\game4\game4DB\Imagenes\namek.jpg" />
-    <Resource Include="games\game4\game4DB\Imagenes\Plantilla.png" />
-    <Resource Include="games\game4\game4DB\Imagenes\vidagoku.png" />
-    <Resource Include="games\game4\game4Universo\background-black.png" />
-    <Resource Include="games\game4\game4Universo\pixel_laser_blue.png" />
-    <Resource Include="games\game4\game4Universo\pixel_laser_green.png" />
-    <Resource Include="games\game4\game4Universo\pixel_laser_red.png" />
-    <Resource Include="games\game4\game4Universo\pixel_laser_yellow.png" />
-    <Resource Include="games\game4\game4Universo\pixel_ship_blue_small.png" />
-    <Resource Include="games\game4\game4Universo\pixel_ship_green_small.png" />
-    <Resource Include="games\game4\game4Universo\pixel_ship_red_small.png" />
-    <Resource Include="games\game4\game4Universo\pixel_ship_yellow.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\btnUniverso.jpg" />
@@ -186,6 +154,87 @@
     <Resource Include="images\PacMan\bannerPacMan.png" />
     <Resource Include="images\MarioBros\salidaMarioBros.png" />
     <Resource Include="images\PacMan\salidaPacMan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="games\game1\game1.py" />
+    <Resource Include="games\game1\tituloPingPong.jpg" />
+    <Content Include="games\game2\game2.py" />
+    <Resource Include="games\game2\tituloTetris.jpg" />
+    <Resource Include="games\game3\finFallDown.jpg" />
+    <Content Include="games\game3\game3.py" />
+    <Resource Include="games\game3\tituloFallDown.jpg" />
+    <Content Include="games\game4\game4DB\Goku.py" />
+    <Resource Include="games\game4\game4DB\Imagenes\barravidagoku.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\barravidaminicell.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\cuadrovidagoku.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\cuadrovidaminicell.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\disparominicell.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\fondo.jpg" />
+    <Resource Include="games\game4\game4DB\Imagenes\goku.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\gokudown.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\gokukamehameha.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\gokuleft.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\gokuright.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\gokuup.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\Hasganado.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\Hasperdido.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\kamehameha.gif" />
+    <Resource Include="games\game4\game4DB\Imagenes\minicell.gif" />
+    <Resource Include="games\game4\game4DB\Imagenes\minicell.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\namek.jpg" />
+    <Resource Include="games\game4\game4DB\Imagenes\Plantilla.png" />
+    <Resource Include="games\game4\game4DB\Imagenes\vidagoku.png" />
+    <Resource Include="games\game4\game4DB\tituloDB.jpg" />
+    <Content Include="games\game4\game4MB\custom_math.py" />
+    <Content Include="games\game4\game4MB\file_management.py" />
+    <Content Include="games\game4\game4MB\graphics.py" />
+    <Content Include="games\game4\game4MB\graphics_text.py" />
+    <Content Include="games\game4\game4MB\graphics_transform.py" />
+    <Content Include="games\game4\game4MB\main.py" />
+    <Content Include="games\game4\game4MB\MarioBros\actores.py" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Bloque cabeceable %28Ladrillo%29.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Bloque cabeceable %28Misteriosa%29.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Bloque cabeceable %28Usada%29.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Bowser.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Castillo.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Colina.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Estrella.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Hongo.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\imagenes.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Mario Grande.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Mario Mini.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Moneda.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Muffin.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Nube 1.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Nube 2.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Nube 3.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Piso 1.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Piso 2.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Tortuga.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Tubo %28Cabeza%29.png" />
+    <Resource Include="games\game4\game4MB\MarioBros\Archivos\Tubo %28Cuerpo%29.png" />
+    <Content Include="games\game4\game4MB\MarioBros\baseElementos.py" />
+    <Content Include="games\game4\game4MB\MarioBros\bloques.py" />
+    <Content Include="games\game4\game4MB\MarioBros\cargar.py" />
+    <Content Include="games\game4\game4MB\MarioBros\decorativo.py" />
+    <Content Include="games\game4\game4MB\MarioBros\plataformas.py" />
+    <Content Include="games\game4\game4MB\MarioBros\reference.py" />
+    <Content Include="games\game4\game4MB\other_tools.py" />
+    <Content Include="games\game4\game4MB\reference.py" />
+    <Content Include="games\game4\game4MB\setup.py" />
+    <Resource Include="games\game4\game4MB\tituloMB.jpg" />
+    <Content Include="games\game4\game4PM\PacMan.py" />
+    <Resource Include="games\game4\game4Universo\background-black.png" />
+    <Resource Include="games\game4\game4Universo\pixel_laser_blue.png" />
+    <Resource Include="games\game4\game4Universo\pixel_laser_green.png" />
+    <Resource Include="games\game4\game4Universo\pixel_laser_red.png" />
+    <Resource Include="games\game4\game4Universo\pixel_laser_yellow.png" />
+    <Resource Include="games\game4\game4Universo\pixel_ship_blue_small.png" />
+    <Resource Include="games\game4\game4Universo\pixel_ship_green_small.png" />
+    <Resource Include="games\game4\game4Universo\pixel_ship_red_small.png" />
+    <Resource Include="games\game4\game4Universo\pixel_ship_yellow.png" />
+    <Content Include="games\game4\game4Universo\SpaceInvaders.py" />
+    <Resource Include="games\game4\game4Universo\tituloUniverso.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

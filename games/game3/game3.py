@@ -11,17 +11,17 @@ clock = pygame.time.Clock()
 
 root = pathlib.Path(__file__).parent.absolute()
 
-pathname = os.path.join(root, "titulo.jpg")
+pathname = os.path.join(root, "tituloFallDown.jpg")
 title_image = pygame.image.load(pathname)
 
-pathname = os.path.join(root, "Fin_juego.jpg")
+pathname = os.path.join(root, "finFallDown.jpg")
 game_over_image = pygame.image.load(pathname)
 
 windowWidth = 400
 windowHeight = 600
 
 surface = pygame.display.set_mode((windowWidth, windowHeight)) # ventana principal para nuestro juego
-pygame.display.set_caption('¡Déjate caer!')
+pygame.display.set_caption('Fall down - MiniVerse')
 
 # Definimos las variables para las pulsaciones de las teclas
 leftDown = False
@@ -198,11 +198,11 @@ while True:
 
   elif gameEnded is True:
     # Draw game over screen
-    surface.blit(game_over_image, (0, 150))
+    surface.blit(game_over_image, (0, 0))
 
   else :
     # Welcome Screen
-    surface.blit(title_image, (0, 150))
+    surface.blit(title_image, (0, 0))
 
   if GAME_TIME.get_ticks() - lastPlatform > platformDelay:
     createPlatform()

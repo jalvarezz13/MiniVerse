@@ -98,7 +98,7 @@ namespace MiniVerse
                         cmd.StartInfo.UseShellExecute = false;
                         cmd.Start();
 
-                        cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && python3 game1.py");
+                        cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && cd game1 && python3 game1.py");
                         cmd.StandardInput.Flush();
                         cmd.StandardInput.Close();
                         cmd.WaitForExit();
@@ -148,7 +148,7 @@ namespace MiniVerse
                         cmd.StartInfo.UseShellExecute = false;
                         cmd.Start();
 
-                        cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && python3 game2.py");
+                        cmd.StandardInput.WriteLine("cd .. && cd .. && cd games && cd game2 && python3 game2.py");
                         cmd.StandardInput.Flush();
                         cmd.StandardInput.Close();
                         cmd.WaitForExit();
@@ -332,7 +332,6 @@ namespace MiniVerse
         {
             if (imgJuego4.Visibility == Visibility.Hidden)
             {
-                MessageBoxResult resultado;
                 switch (tematica)
                 {
                     //JUEGO ESPECIAL UNIVERSO

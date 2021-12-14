@@ -2,6 +2,7 @@ import os
 import pygame
 import pygame.gfxdraw
 import time
+import pathlib, os
 
 #variables de sinonimia -------------------->>
 true = True 
@@ -14,9 +15,17 @@ pygame.init() #protocolo de inicializacion para pygame
 os.environ['SDL_VIDEO_CENTERED'] = '1' #hace que la ventana al redimensionarse este centrada en la pantalla
 
 #variables de regulacion de canvas -------------------->>
-canvas = [pygame.display.set_mode([640, 480], pygame.RESIZABLE)] #canvas actual
+canvas = [pygame.display.set_mode([500, 470], pygame.RESIZABLE)] #canvas actual
 mainCanvas = [null] #canvas principal
 canvasResizable = [True] #variable para el control del redimensionamiento del canvas principal
+
+root = pathlib.Path(__file__).parent.absolute()
+pathname = os.path.join(root, "tituloMB.jpg")
+title_image = pygame.image.load(pathname)
+canvas[0].blit(title_image, (0, 0))
+pygame.display.update()
+time.sleep(2)
+
 
 #variable de bucle -------------------->>
 fps = [60] #variable de control para los fotogramas dibujados por segundo
@@ -26,7 +35,7 @@ colorDefeatPaint = [0, 0, 0, 255]
 fontDefeatPaint = ["arial", 18, false, false]
 
 strokePaint = [1] #variable de control que ayuda con el grosor del borde de los poligonos y curvas a dibujar
-radioPointG = [2] #variable de control para el tamaño de la representacion de los puntos
+radioPointG = [2] #variable de control para el tamaï¿½o de la representacion de los puntos
 colorPaint = [colorDefeatPaint[0], colorDefeatPaint[1], colorDefeatPaint[1], 255] #variable de control para representar el color con el que se desea dibujar una figura
 texturePaint = [null] #variable que ayuda a representar una textura con la que se desea pintar un poligono
 
@@ -548,7 +557,7 @@ def upPressed():
 def downPressed():
     return isKeyPressed(pygame.K_DOWN)
 
-def spacePressed():
+def spacePressed():     
     return isKeyPressed(pygame.K_SPACE)
     
 def isKeyPressed(ascii=0):
@@ -607,7 +616,7 @@ def fi_reemplazarCoincidencia(imagen, busqueda, reemplazo=0, posPixelBusqueda=nu
         for f in range(h):
             rgba = imagen.get_at((c, f))
             coincidencia = true
-            distancia = 0;
+            distancia = 0
             for i in range(4):
                 comp = rgba[i] - busqueda[i]
                 distancia += comp * comp
