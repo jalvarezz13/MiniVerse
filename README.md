@@ -38,6 +38,6 @@ git clone https://github.com/jalvarezz13/Minijuegos_JJC
   ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 ## Autores
-  * Javier Álvarez Páramo <a title="Linkedin" href="https://www.linkedin.com/in/javieralpa/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-  * Juan Muñoz Calvo <a title="Linkedin" href="https://www.linkedin.com/in/jmunoz00/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-  * Carlos Mohedano Callejo <a title="Linkedin" href="https://www.linkedin.com/in/carlos-mohedano-callejo-071363228/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<pre>Javier Álvarez Páramo  <a align="center" title="Linkedin" href="https://www.linkedin.com/in/javieralpa/"><img align="center" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/></a></pre>
+<pre>Juan Muñoz Calvo  <a align="center" title="Linkedin" href="https://www.linkedin.com/in/jmunoz00/"><img align="center" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/></a></pre>
+<pre>Carlos Mohedano Callejo  <a align="center" title="Linkedin" href="https://www.linkedin.com/in/carlos-mohedano-callejo-071363228/"><img align="center" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/></a></pre>
