@@ -1,7 +1,7 @@
 <img src="https://github.com/jalvarezz13/Minijuegos_JJC/blob/master/images/logoGH.png" width="" height="80" align = "left">
 
 # MiniVerse
-### Contenido
+## Contenido
 Este trabajo nace como idea de crear una aplicación interactiva para niños en la asignatura de Multimedia del curso 2020-2021, de la Escuela Superior de Informática. 
 Este juego consiste en diferentes entornos ambientados, donde el jugador podramos mover con las arrow keys de su teclado e interactuar con los diferentes juegos que se encuentran en su interior: Tetris, MarioBros, PacMan, PingPong, ...
 
