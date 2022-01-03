@@ -1,4 +1,4 @@
-<img src="https://github.com/jalvarezz13/Minijuegos_JJC/blob/master/images/Universo/LogoUniverso.png" width="" height="80" align = "left">
+<img src="https://github.com/jalvarezz13/Minijuegos_JJC/blob/master/images/logoGH.png" width="" height="80" align = "left">
 
 # MiniVerse
 ### Contenido
