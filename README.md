@@ -6,7 +6,7 @@ Este trabajo nace como idea de crear una aplicación interactiva para niños en 
 Este juego consiste en diferentes entornos ambientados, donde el jugador podramos mover con las arrow keys de su teclado e interactuar con los diferentes juegos que se encuentran en su interior: Tetris, MarioBros, PacMan, PingPong, ...
 
 ## Como usar
-Contiene todo el código y los recursos multimedia para la correcta ejecución de la aplicación. Para ello tienes que:
+Contiene todo el código y los recursos multimedia para la correcta ejecución de la aplicación. Para ello:
   1. Clona el repositorio con 
 ```
 git clone https://github.com/jalvarezz13/Minijuegos_JJC
